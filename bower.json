@@ -1,0 +1,8 @@
+{
+  "name": "simple-structure",
+  "description": " Neat structure example for simple application",
+  "version": "0.0.0", 
+  "dependencies": {
+    "angular": "1.2.x"   
+  }
+}
