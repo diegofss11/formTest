@@ -21,9 +21,29 @@ module.exports = function( grunt ) {
 	    compass: {
 			dev: {
 				options: {
-					sassDir: 'app/sass',
-					cssDir: 'app/sass/css'					
+					sassDir: 'source/sass',
+					cssDir: 'source/sass/css'					
 				}
+			}
+		},
+		uglify: {
+		    my_target: {
+		    	files: {
+		        	'source/js/output.min.js': ['source/js/**.js']
+		      	}
+		    }
+  		},
+  		jshint: {
+			all: {
+				options: {
+					jshintrc: '.jshintrc'
+				},
+				src: [
+					'**/index.js',
+				  	'source/js/**/*.js',
+				  	'test/**/*.js',
+				  	'!node_modules/**/*.js'
+				]
 			}
 		},
 		watch: {
@@ -37,7 +57,9 @@ module.exports = function( grunt ) {
 
   	//** LOAD TASKS  
 	grunt.loadNpmTasks('grunt-contrib-compass'); //must have install compass through gem - gem install compass
-	grunt.loadNpmTasks('grunt-contrib-connect');	
+	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-uglify');	
 	grunt.loadNpmTasks('grunt-karma');	
 
 
@@ -48,6 +70,6 @@ module.exports = function( grunt ) {
 
 
 	//DEFAULT
-	grunt.registerTask('default',['compass', 'connect:server']);
+	grunt.registerTask('default',['compass', 'jshint', 'connect:server']);
 };
 
