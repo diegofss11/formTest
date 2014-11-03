@@ -26,6 +26,14 @@ module.exports = function( grunt ) {
 				}
 			}
 		},
+		includeSource: {
+		    options: {
+		    	// Task-specific options go here.
+		    },
+		    my_target: {
+		    	// Target-specific file lists and/or options go here.
+			},
+		},
 		uglify: {
 		    my_target: {
 		    	files: {
@@ -48,7 +56,7 @@ module.exports = function( grunt ) {
 		},
 		watch: {
 			css: {
-				files: '**/*.scss',
+				files: ['**/*.scss', '**/*.js'],
 				tasks: ['compass']
 			}
 		}
@@ -56,11 +64,13 @@ module.exports = function( grunt ) {
   	});
 
   	//** LOAD TASKS  
-	grunt.loadNpmTasks('grunt-contrib-compass'); //must have install compass through gem - gem install compass
-	grunt.loadNpmTasks('grunt-contrib-connect');
-	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-contrib-uglify');	
-	grunt.loadNpmTasks('grunt-karma');	
+	grunt.loadNpmTasks('grunt-contrib-compass'); //compile SASS to CSS - must have install compass through gem - gem install compass
+	grunt.loadNpmTasks('grunt-contrib-connect'); //connect a webservice
+	grunt.loadNpmTasks('grunt-contrib-jshint'); //VERIFY JSHINTRC FILE WITH QUESTRADE
+	grunt.loadNpmTasks('grunt-contrib-uglify');	//minimify javascript files
+	grunt.loadNpmTasks('grunt-contrib-watch'); //run predefined tasks whenever watched file patterns are added, changed or deleted.
+	grunt.loadNpmTasks('grunt-include-source'); //include your sources into your HTML files automatically
+	grunt.loadNpmTasks('grunt-karma'); //karma test runner	
 
 
 	//** REGISTER TASKS	  

@@ -3,22 +3,8 @@
     "devel": true,
     "camelcase": true,
     "smarttabs": true,
+    "latedef": "nofunc",
     "eqeqeq": true,
-    "globals": {
-        "angular": true,
-        "app": true,
-        "by": true,
-        "describe": true,
-        "it": true,
-        "expect": true,
-        "exports": true,
-        "beforeEach": true,
-        "afterEach": true,
-        "module": true,
-        "inject": true,
-        "element": false,
-        "browser": false
-    },
     "globalstrict": true,
     "indent": 4,
     "quotmark": "single",
@@ -26,5 +12,29 @@
     "trailing": true,
     "undef": true,
     "unused": true,
-    "strict": false
+    "strict": false,
+    "globals": {
+        "angular": false,
+        "$": false,
+        "jQuery": false,
+
+        "app": true,
+        
+        "browser": false,
+        "by": false,
+        "describe": false,
+        "element": false,
+        "exports": false,
+        "it": false,
+        "expect": false,
+        "beforeEach": false,
+        "inject": false,
+        "module": false,
+        "jasmine": false,
+        "spyOn": false,
+        "afterEach": false
+    }   
 }
+
+
+
