@@ -47,6 +47,9 @@ module.exports = function( grunt ) {
 				]
 			}
 		},
+		html2js: {
+
+		},
 		open: {
 			dev: {
 				path: 'http://127.0.0.1:8001',
@@ -56,10 +59,7 @@ module.exports = function( grunt ) {
 		watch: {
 			js: {
 		        files: 'source/js/**/*.js',
-		        tasks: ['uglify'],
-		        options: {
-		          livereload: true,
-        		}
+		        tasks: ['uglify']
      		 },
       		css: {
 		        files: ['source/styles/css/*.css', 'source/styles/*.scss'],
@@ -77,6 +77,7 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks('grunt-contrib-jshint'); //keep JavaScript code consistent
 	grunt.loadNpmTasks('grunt-contrib-uglify');	//minimify javascript files
 	grunt.loadNpmTasks('grunt-contrib-watch'); //run predefined tasks whenever watched file patterns are added, changed or deleted.
+	grunt.loadNpmTasks('grunt-html2js'); //converts html to JavaScript and assembles them into an Angular module cached
 	grunt.loadNpmTasks('grunt-open'); //open urls and files from a grunt task
 	grunt.loadNpmTasks('grunt-karma'); //karma test runner	
 
