@@ -1,6 +1,7 @@
 module.exports = function( grunt ) { 
 	grunt.initConfig({
 	  	pkg: grunt.file.readJSON('package.json'),
+
 		connect: { //task
 			server:{ //target
 				options: { //target option
@@ -21,19 +22,11 @@ module.exports = function( grunt ) {
 	    compass: {
 			dev: {
 				options: {
-					sassDir: 'source/sass',
-					cssDir: 'source/sass/css'					
+					sassDir: 'source/styles',
+					cssDir: 'source/styles/css'					
 				}
 			}
-		},
-		includeSource: {
-		    options: {
-		    	// Task-specific options go here.
-		    },
-		    my_target: {
-		    	// Target-specific file lists and/or options go here.
-			},
-		},
+		},		
 		uglify: {
 		    my_target: {
 		    	files: {
@@ -47,39 +40,52 @@ module.exports = function( grunt ) {
 					jshintrc: '.jshintrc'
 				},
 				src: [
-					'**/index.js',
-				  	'source/js/**/*.js',
+					'source/js/**/*.js',
 				  	'test/**/*.js',
+				  	'!source/js/output.min.js',
 				  	'!node_modules/**/*.js'
 				]
 			}
 		},
-		watch: {
-			css: {
-				files: ['**/*.scss', '**/*.js'],
-				tasks: ['compass']
+		open: {
+			dev: {
+				path: 'http://127.0.0.1:8001',
+      			app: 'Google Chrome'
 			}
-		}
+		},
+		watch: {
+			js: {
+		        files: 'source/js/**/*.js',
+		        tasks: ['uglify'],
+		        options: {
+		          livereload: true,
+        		}
+     		 },
+      		css: {
+		        files: ['source/styles/css/*.css', 'source/styles/*.scss'],
+		        tasks: ['compass']		        
+      		}
 
+		}
   	});
 
-  	//** LOAD TASKS  
-	grunt.loadNpmTasks('grunt-contrib-compass'); //compile SASS to CSS - must have install compass through gem - gem install compass
+  	// ===========================================================================
+  	// LOAD GRUNT PLUGINS ========================================================
+    // =========================================================================== 
+	grunt.loadNpmTasks('grunt-contrib-compass'); //compile SASS to CSS - must install compass through gem - gem install compass
 	grunt.loadNpmTasks('grunt-contrib-connect'); //connect a webservice
-	grunt.loadNpmTasks('grunt-contrib-jshint'); //VERIFY JSHINTRC FILE WITH QUESTRADE
+	grunt.loadNpmTasks('grunt-contrib-jshint'); //keep JavaScript code consistent
 	grunt.loadNpmTasks('grunt-contrib-uglify');	//minimify javascript files
 	grunt.loadNpmTasks('grunt-contrib-watch'); //run predefined tasks whenever watched file patterns are added, changed or deleted.
-	grunt.loadNpmTasks('grunt-include-source'); //include your sources into your HTML files automatically
+	grunt.loadNpmTasks('grunt-open'); //open urls and files from a grunt task
 	grunt.loadNpmTasks('grunt-karma'); //karma test runner	
 
 
-	//** REGISTER TASKS	  
-	
-	//GRUNT TEST-KARMA
+	// ===========================================================================
+  	// REGISTER TASKS ==============================================================
+  	// ===========================================================================	  
 	grunt.registerTask('test-karma',['karma']);	
-
-
-	//DEFAULT
-	grunt.registerTask('default',['compass', 'jshint', 'connect:server']);
+	
+	grunt.registerTask('default',['compass', 'connect:server', 'open:dev', 'watch']);
 };
 

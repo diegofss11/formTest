@@ -10,5 +10,6 @@ MyAngularSeed - Seed for AngularJS application starter
 * Ugligy - Minimify JavaScript files
 * Watch - run predefined tasks whener watched file patterns are added, changed or deleted
 * Include Source - include your sources into your HTML files automatically
+* Grunt Open - Open urls and files from a grunt task
 * Karma - Test runner for Jasmine
 
