@@ -48,9 +48,23 @@ module.exports = function( grunt ) {
 			}
 		},
 		html2js: {
+			options: {
+				module: 'app.modules',
+				singleModule: true,
+				htmlmin: {
+					collapseBooleanAttributes: true,
+					collapseWhitespace: true,
+					removeAttributeQuotes: true,
+					removeComments: true,
+					removeEmptyAttributes: true,
+					removeRedundantAttributes: true,
+					removeScriptTypeAttributes: true,
+					removeStyleLinkTypeAttributes: true
+    			}
+			},
 			main: {
       			src: ['source/partials/*.html'],
-      			dest: 'source/dist/js/templates.js'
+      			dest: 'source/dist/js/templates_cache.js'
     		}
 		},
 		open: {
@@ -90,6 +104,6 @@ module.exports = function( grunt ) {
   	// ===========================================================================	  
 	grunt.registerTask('test',['karma']);	
 	
-	grunt.registerTask('default',['compass', 'connect:server', 'open:dev', 'watch']);
+	grunt.registerTask('default',['compass', 'html2js', 'connect:server', 'open:dev', 'watch']);
 };
 
