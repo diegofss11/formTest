@@ -16,21 +16,22 @@ module.exports = function( grunt ) {
 	        unit: { 
 	            configFile: 'test/karma.conf.js', 
 	            runnerPort: 9876,
-	            browsers: [ 'Chrome' ]
+	            browsers: ['PhantomJS'],
+	            //browsers: [ 'Chrome' ]
 	        }
 	    },
 	    compass: {
 			dev: {
 				options: {
 					sassDir: 'source/styles',
-					cssDir: 'source/styles/css'					
+					cssDir: 'source/dist/styles/css'					
 				}
 			}
 		},		
 		uglify: {
 		    my_target: {
 		    	files: {
-		        	'source/js/output.min.js': ['source/js/**.js']
+		        	'source/dist/js/output.min.js': ['source/js/**.js']
 		      	}
 		    }
   		},
@@ -42,13 +43,15 @@ module.exports = function( grunt ) {
 				src: [
 					'source/js/**/*.js',
 				  	'test/**/*.js',
-				  	'!source/js/output.min.js',
 				  	'!node_modules/**/*.js'
 				]
 			}
 		},
 		html2js: {
-
+			main: {
+      			src: ['source/partials/*.html'],
+      			dest: 'source/dist/js/templates.js'
+    		}
 		},
 		open: {
 			dev: {
@@ -62,7 +65,7 @@ module.exports = function( grunt ) {
 		        tasks: ['uglify']
      		 },
       		css: {
-		        files: ['source/styles/css/*.css', 'source/styles/*.scss'],
+		        files: ['source/styles/*.scss'],
 		        tasks: ['compass']		        
       		}
 
@@ -77,7 +80,7 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks('grunt-contrib-jshint'); //keep JavaScript code consistent
 	grunt.loadNpmTasks('grunt-contrib-uglify');	//minimify javascript files
 	grunt.loadNpmTasks('grunt-contrib-watch'); //run predefined tasks whenever watched file patterns are added, changed or deleted.
-	grunt.loadNpmTasks('grunt-html2js'); //converts html to JavaScript and assembles them into an Angular module cached
+	grunt.loadNpmTasks('grunt-html2js'); //converts AngularJS templates to JavaScript
 	grunt.loadNpmTasks('grunt-open'); //open urls and files from a grunt task
 	grunt.loadNpmTasks('grunt-karma'); //karma test runner	
 
@@ -85,7 +88,7 @@ module.exports = function( grunt ) {
 	// ===========================================================================
   	// REGISTER TASKS ==============================================================
   	// ===========================================================================	  
-	grunt.registerTask('test-karma',['karma']);	
+	grunt.registerTask('test',['karma']);	
 	
 	grunt.registerTask('default',['compass', 'connect:server', 'open:dev', 'watch']);
 };

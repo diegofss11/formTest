@@ -2,6 +2,8 @@
   "name": "myAngularSeed",
   "description": "My angular seed for application starter",
   "version": "0.0.0", 
+  "repository": "https://github.com/diegofss11/myAngularSeed",
+  "license": "MIT",
   "dependencies": {
     "angular": "1.2.x"   
   }

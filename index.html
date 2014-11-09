@@ -4,19 +4,20 @@
 		<meta charset="utf-8">  
 		<title>My AngularJS Structure</title>
 
-		<link rel="stylesheet" href="source/styles/main.css"/> 
+		<link rel="stylesheet" href="source/dist/styles/css/main.css"/> 
 
 	</head>
 	<body>
-		<div>
-			{{ 1 +1 }}
+		<div test-directive>
+			
 		</div>
 
 		
-		<script src="source/bower_components/angular/angular.js"></script>
+		<script src="bower_components/angular/angular.js"></script>
 		<script src="source/js/app.js"></script>
-		<script src="source/js/controllers/controllers.js"></script>
-		<script src="source/js/directives/directives.js"></script>
-		<script src="source/js/services/services.js"></script>
+		
+		<script src="source/js/controllers/TestController.js"></script>
+		<script src="source/js/directives/TestDirective.js"></script>
+		<script src="source/js/services/TestService.js"></script>
 	</body>
 </html>
