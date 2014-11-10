@@ -21,7 +21,7 @@ module.exports = function( grunt ) {
 	        }
 	    },
 	    compass: {
-			dev: {
+			build: {
 				options: {
 					sassDir: 'source/styles',
 					cssDir: 'source/dist/styles/css'					
@@ -83,7 +83,7 @@ module.exports = function( grunt ) {
 	        }
     	},
 		open: {
-			dev: {
+			build: {
 				path: 'http://127.0.0.1:8001',
       			app: 'Google Chrome'
 			}
@@ -121,8 +121,8 @@ module.exports = function( grunt ) {
   	// ===========================================================================	  
 	grunt.registerTask('test',['karma']);	
 	
-	grunt.registerTask('default',['clean:dist', 'compass', 'html2js', 'connect:server', 'open:dev', 'watch', 'clean:temp']);
+	grunt.registerTask('default',['clean:dist', 'compass', 'html2js', 'connect:server', 'open:build', 'watch', 'clean:temp']);
 
-	grunt.registerTask('dev',['clean:dist', 'compass', 'html2js', 'jshint', 'ngAnnotate', 'uglify', 'connect:server', 'open:dev', 'watch', 'clean:temp']);
+	grunt.registerTask('build',['clean:dist', 'compass', 'html2js', 'jshint', 'ngAnnotate', 'uglify', 'connect:server', 'open:build', 'watch', 'clean:temp']);
 };
 
