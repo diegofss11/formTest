@@ -1,5 +1,6 @@
 'use strict';
 
-/* Services */
-
-
+angular.module('app')
+	.service('TestService', function(){
+		
+	});

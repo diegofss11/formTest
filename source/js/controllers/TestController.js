@@ -2,7 +2,7 @@
 
 
 angular.module('app')
-	.controller('TestController', function(){
+	.controller('TestController', function($scope, TestService){
 
 	});
   
