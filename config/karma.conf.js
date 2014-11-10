@@ -18,7 +18,7 @@ module.exports = function(config){
         files : [
           '../bower_components/angular/angular.min.js',
           '../source/js/**/*.js',
-          'unit/controllers/*.js'
+          '../test/unit/controllers/*.js'
         ],
 
         plugins : [

@@ -1,6 +1,6 @@
 'use strict';
 
-describe('TestController', function(){
+describe('testController', function(){
 	
 	it('should pass controller', function(){
 		console.log('testing');

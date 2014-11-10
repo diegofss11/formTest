@@ -1,4 +1,4 @@
 'use strict';
 
 
-angular.module('app',['app.modules']);
+angular.module('app',['app.modules', 'app.exception']);

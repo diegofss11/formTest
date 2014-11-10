@@ -1,6 +1,6 @@
 'use strict';
 
-describe('TestService', function(){
+describe('testService', function(){
 	
 	it('should pass service', function(){
 		expect(true).toBe(true);
