@@ -29,7 +29,7 @@ module.exports = function( grunt ) {
 			}
 		},		
 		uglify: {
-		    my_target: {
+		    app: {
 		    	files: {
 		        	'source/dist/js/output.min.js': ['source/dist/js/temp/Annotated.js']
 		      	}

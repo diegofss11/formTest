@@ -1,6 +1,5 @@
 'use strict';
 
-'use strict';
 
 describe('TestDirective', function(){
 	
