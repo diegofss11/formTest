@@ -8,7 +8,7 @@
  */
 
 angular.module('app')
-	.controller('testController', function(){
+	.controller('testController', function(service){
 		
 	});
   

@@ -14,10 +14,7 @@ module.exports = function( grunt ) {
 		},
 		karma: { 
 	        unit: { 
-	            configFile: 'config/karma.conf.js', 
-	            runnerPort: 9876,
-	            browsers: ['PhantomJS'],
-	            //browsers: [ 'Chrome' ]
+	            configFile: 'karma.conf.js'	            
 	        }
 	    },
 	    compass: {
