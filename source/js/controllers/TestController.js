@@ -9,7 +9,7 @@
 	*/
 
 	angular.module('app')
-		.controller('testController', function(service){
+		.controller('testController', function(){
 		
 	});
 })();
