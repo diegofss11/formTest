@@ -1,4 +1,6 @@
-'use strict';
+(function(){
+	'use strict';
 
 
-angular.module('app',['app.exception']);
+	angular.module('app', ['app.exception']);
+})();
