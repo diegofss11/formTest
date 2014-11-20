@@ -15,5 +15,6 @@ MyAngularSeed - Seed for AngularJS application starter
 * grunt-open - Opens urls and files from a grunt task
 * grunt-karma - Test runner for Jasmine
 * grunt-inject - Injects references to files into other files - js and css
+* time-grunt - Shows the execution time for grunt tasks
 
 
