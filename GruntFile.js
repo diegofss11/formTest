@@ -1,4 +1,6 @@
 module.exports = function( grunt ) { 
+	require('time-grunt')(grunt); //shows the execution time for tasks
+
 	grunt.initConfig({
 	  	pkg: grunt.file.readJSON('package.json'),
 
@@ -126,7 +128,7 @@ module.exports = function( grunt ) {
 
 
 	// ===========================================================================
-  	// REGISTER TASKS ==============================================================
+  	// REGISTER TASKS ============================================================
   	// ===========================================================================	  
 	grunt.registerTask('test',['karma']);	
 	
