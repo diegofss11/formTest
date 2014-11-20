@@ -69,6 +69,18 @@ module.exports = function( grunt ) {
       			dest: 'source/dist/js/templates_cache.js'
     		}
 		},
+		injector: {
+			options: {},
+		    app: {
+		      	files: {
+		      		'index.html' : [
+		        		'bower_components/angular/angular.js',
+		        		'source/js/**/*js', 		          		
+		          		'source/dist/styles/css/main.css'
+		        	]
+		        }
+		    },
+		},
 		ngAnnotate: {
 	        options: {
 	            singleQuotes: true
@@ -94,7 +106,6 @@ module.exports = function( grunt ) {
 		        files: ['source/styles/*.scss'],
 		        tasks: ['compass']		        
       		}
-
 		}
   	});
 
@@ -108,6 +119,7 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');	//minimify javascript files
 	grunt.loadNpmTasks('grunt-contrib-watch'); //run predefined tasks whenever watched file patterns are added, changed or deleted.
 	grunt.loadNpmTasks('grunt-html2js'); //converts AngularJS templates to JavaScript
+	grunt.loadNpmTasks('grunt-injector'); //injects css and js in a file
 	grunt.loadNpmTasks('grunt-ng-annotate'); //adds and removes AngularJS dependency injection using annotations
 	grunt.loadNpmTasks('grunt-open'); //open urls and files from a grunt task
 	grunt.loadNpmTasks('grunt-karma'); //karma test runner	
@@ -118,8 +130,8 @@ module.exports = function( grunt ) {
   	// ===========================================================================	  
 	grunt.registerTask('test',['karma']);	
 	
-	grunt.registerTask('default',['clean:dist', 'compass', 'html2js', 'connect:server', 'open:build', 'watch', 'clean:temp']);
+	grunt.registerTask('default',['clean:dist', 'compass', 'html2js', 'injector', 'connect:server', 'open:build', 'watch', 'clean:temp']);
 
-	grunt.registerTask('build',['clean:dist', 'compass', 'html2js', 'jshint', 'ngAnnotate', 'uglify', 'connect:server', 'open:build', 'watch', 'clean:temp']);
+	grunt.registerTask('build',['clean:dist', 'compass', 'html2js', 'injector' ,'jshint', 'ngAnnotate', 'uglify', 'connect:server', 'open:build', 'watch', 'clean:temp']);
 };
 
