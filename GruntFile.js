@@ -1,3 +1,5 @@
+var Dgeni = require('dgeni');
+
 module.exports = function( grunt ) { 
 	require('time-grunt')(grunt); //shows the execution time for tasks
 
@@ -125,15 +127,22 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks('grunt-ng-annotate'); //adds and removes AngularJS dependency injection using annotations
 	grunt.loadNpmTasks('grunt-open'); //open urls and files from a grunt task
 	grunt.loadNpmTasks('grunt-karma'); //karma test runner	
-
+	
 
 	// ===========================================================================
   	// REGISTER TASKS ============================================================
   	// ===========================================================================	  
-	grunt.registerTask('test',['karma']);	
+	grunt.registerTask('test',['karma']);
+
+	grunt.registerTask('dgeni', 'Generate docs via dgeni.', function() {
+		var done = this.async(), 
+			dgeni = new Dgeni([require('./docs/dgeni-conf')]);
+		
+		dgeni.generate().then(done);
+	});	
 	
 	grunt.registerTask('default',['clean:dist', 'compass', 'html2js', 'injector', 'connect:server', 'open:build', 'watch', 'clean:temp']);
 
-	grunt.registerTask('build',['clean:dist', 'compass', 'html2js', 'injector' ,'jshint', 'ngAnnotate', 'uglify', 'connect:server', 'open:build', 'watch', 'clean:temp']);
+	grunt.registerTask('build',['clean:dist', 'compass', 'html2js', 'injector' ,'jshint', 'ngAnnotate', 'dgeni', 'uglify', 'connect:server', 'open:build', 'watch', 'clean:temp']);
 };
 

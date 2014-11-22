@@ -2,9 +2,7 @@
 	'use strict';
 
 	/**
-	* @ngdoc controller
 	* @name testController
-	* @id testController
 	* @description This is a test controller
 	*/
 

@@ -2,10 +2,8 @@
     'use sctrict';
 
     /**
-     * @ngdoc decorator
-     * @name Exception
-     * @id app.exception
      * @description Module for exceptionHandler decorator
+     * @requires $provide
      */
 
     angular.module('app.exception', [])

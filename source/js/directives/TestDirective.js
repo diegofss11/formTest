@@ -2,9 +2,7 @@
 	'use strict';
 
 	/**
-	 * @ngdoc directive
 	 * @name testDirective
-	 * @id testDirective
 	 * @description This is a test directive
 	 * ###How to use this directive
 	 * <div test-directive></div>
