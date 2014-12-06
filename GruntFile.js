@@ -1,4 +1,4 @@
-var Dgeni = require('dgeni');
+var Dgeni = require('dgeni'); 
 
 module.exports = function( grunt ) { 
 	require('time-grunt')(grunt); //shows the execution time for tasks
@@ -10,7 +10,7 @@ module.exports = function( grunt ) {
 			server:{ //target
 				options: { //target option
 					port: 8001, 
-					hostname: '127.0.0.1', // Change this to '0.0.0.0' to access the server from outside.
+					hostname: 'localhost', // Change this to '0.0.0.0' to access the server from outside.
 					keepalive: true,
 					open: true
 				}
@@ -21,6 +21,14 @@ module.exports = function( grunt ) {
 	            configFile: 'config/karma.conf.js'	            
 	        }
 	    },
+	    protractor: {
+      		options: {
+        		keepAlive: true,
+        		noColor: false,
+        		configFile: 'config/protractor.conf.js'
+      		},
+      		run: {},
+    	},
 	    compass: {
 			build: {
 				options: {
@@ -125,14 +133,20 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks('grunt-html2js'); //converts AngularJS templates to JavaScript
 	grunt.loadNpmTasks('grunt-injector'); //injects css and js in a file
 	grunt.loadNpmTasks('grunt-ng-annotate'); //adds and removes AngularJS dependency injection using annotations
+	grunt.loadNpmTasks('grunt-protractor-runner'); //plugin for protractor runner
 	grunt.loadNpmTasks('grunt-open'); //open urls and files from a grunt task
 	grunt.loadNpmTasks('grunt-karma'); //karma test runner	
 	
 
 	// ===========================================================================
   	// REGISTER TASKS ============================================================
-  	// ===========================================================================	  
+  	// ===========================================================================	
+
+  	//TESTS  
 	grunt.registerTask('test',['karma']);
+	grunt.registerTask('test-protractor',['protractor']);
+	// ===========================================================================	
+
 
 	grunt.registerTask('dgeni', 'Generate docs via dgeni.', function() {
 		var done = this.async(), 

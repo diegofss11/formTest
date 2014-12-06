@@ -2,7 +2,9 @@
     'use sctrict';
 
     /**
-     * @description Module for exceptionHandler decorator
+     * @name ExceptionHandler
+     * @description 
+     * Module for exceptionHandler decorator
      * @requires $provide
      */
 

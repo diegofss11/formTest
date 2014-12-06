@@ -2,10 +2,14 @@
 	'use strict';
 
 	/**
-	 * @name testDirective
-	 * @description This is a test directive
-	 * ###How to use this directive
-	 * <div test-directive></div>
+	 * @ngdoc directive
+	 * @name TestDirective
+	 * @description 
+	 * This is a test directive
+	 * @example
+	   <example>
+	       <div test-directive></div>
+	    </example>
 	 */
 
 	angular.module('app')

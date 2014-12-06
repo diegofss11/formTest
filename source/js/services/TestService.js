@@ -2,8 +2,10 @@
 	'use strict';
 
 	/**
-	 * @name testService
-	 * @description This is a test service
+	 * @ngdoc service
+	 * @name TestService
+	 * @description 
+	 * This is a test service
 	 */
 
 

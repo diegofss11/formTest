@@ -15,7 +15,9 @@ MyAngularSeed - Seed for AngularJS application starter
 * grunt-open - Opens urls and files from a grunt task
 * grunt-karma - Test runner for Jasmine
 * grunt-inject - Injects references to files into other files - js and css
+* grunt-protractor-runner - Plugin for protractor runner
 * time-grunt - Shows the execution time for grunt tasks
-* Dgeni - Documentation generator on js files
+* Dgeni - Documentation generator on js files - tags notes found on https://github.com/angular/dgeni-packages/blob/master/NOTES.md
+
 
 

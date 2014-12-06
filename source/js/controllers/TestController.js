@@ -2,8 +2,9 @@
 	'use strict';
 
 	/**
-	* @name testController
-	* @description This is a test controller
+	* @name TestController
+	* @description 
+	* This is a test controller
 	*/
 
 	angular.module('app')
