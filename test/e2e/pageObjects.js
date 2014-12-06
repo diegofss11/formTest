@@ -1,5 +1,12 @@
-var pageObject = function() {
-    this.testElement = element(By.css('.test'));   
-};
+(function() {
+    'use strict';
 
-module.exports = new pageObject();
+    var PageObject = function() {
+        this.testElement = element(By.css('.test'));   
+    };
+
+    module.exports = new PageObject();
+})();
+
+
+

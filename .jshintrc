@@ -22,6 +22,8 @@
         
         "browser": false,
         "by": false,
+        "By": false,
+        "require": false,
         "describe": false,
         "element": false,
         "exports": false,

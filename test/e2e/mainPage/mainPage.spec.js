@@ -1,12 +1,18 @@
-describe('E2E Testing', function(){	
-    var pageObjects = require('../pageObjects.js');
+(function() {
+	'use strict';
 
-    beforeEach( function () {
-        browser.get('/'); //navigates the router to the route
-        browser.waitForAngular();
-    });
+	describe('E2E Testing', function(){	
+	    var pageObjects = require('../pageObjects.js');
 
-    it('Should body be defined', function () {
-    	expect(pageObjects.testElement).toBeDefined();
-    });
-});
+	    beforeEach( function () {
+	        browser.get('/'); //navigates the router to the route
+	        browser.waitForAngular();
+	    });
+
+	    it('Should body be defined', function () {
+	    	expect(pageObjects.testElement).toBeDefined();
+	    });
+	});
+})();
+
+
