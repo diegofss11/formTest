@@ -19,22 +19,6 @@
         "jQuery": false,
 
         "app": true,
-
-        "browser": false,
-        "by": false,
-        "By": false,
-        "require": false,
-        "describe": false,
-        "element": false,
-        "exports": false,
-        "it": false,
-        "expect": false,
-        "beforeEach": false,
-        "inject": false,
-        "module": false,
-        "jasmine": false,
-        "spyOn": false,
-        "afterEach": false
     }
 }
 

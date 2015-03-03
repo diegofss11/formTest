@@ -1,1 +1,19 @@
-<div>{{ 1 + 1 }}</div>
+<div class="template-fields">
+	<input type="text" placeholder="Filter" ng-model="vmFirstScreen.filter">
+
+	<accordion close-others="false">
+		<accordion-group is-open="templateField.isOpen" ng-repeat="templateField in vmFirstScreen.templateFields">
+			<accordion-heading>
+				{{ templateField.title }} <i class="pull-right glyphicon" ng-class="templateField.isOpen ? 'glyphicon glyphicon-menu-up' : 'glyphicon glyphicon-menu-down'"></i>
+			</accordion-heading>
+			<a href="#" class="separator">Select all</a>
+			<a href="#">Deselect all</a>
+
+			<div class="checkbox-items" ng-repeat="item in templateField.items">
+				<input type="checkbox" aria-label="{{ item.label }}" ng-model="item.value">
+				<span ng-bind-html="item.label | highlight:vmFirstScreen.filter"></span>
+			</div>
+		</accordion-group>
+	</accordion>
+	</accordion>
+</div>

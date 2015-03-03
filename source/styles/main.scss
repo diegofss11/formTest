@@ -2,5 +2,7 @@
  * Global SCSS file - other files must be imported here
 */
 
-@import "page1";
-@import "page2";
+@import "variables";
+@import "firstScreen";
+@import "secondScreen";
+@import "common";

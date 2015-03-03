@@ -2,20 +2,19 @@
 	'use strict';
 
 	/**
-	 * @ngdoc directive
-	 * @name TestDirective
-	 * @description
-	 * This is a test directive
-	 * @example
-	   <example>
-	       <div test-directive></div>
-	    </example>
+	 * [FirstScreen directive] Responsible to include firstScreen template
+	 *
+	 * <example>
+	 *     <div first-screen></div>
+	 * </example>
 	 */
 
 	angular.module('formTest')
 		.directive('firstScreen', function(){
 			return {
 				restrict: 'EA',
+				controller: 'firstScreenCtrl',
+				controllerAs: 'vmFirstScreen',
 				templateUrl: '/source/partials/FirstScreen.tpl.html'
 			};
 		});

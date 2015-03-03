@@ -81,11 +81,13 @@ module.exports = function( grunt ) {
 		        		//JS
 		        		'bower_components/angular/angular.js',
 		        		'bower_components/angular-bootstrap/ui-bootstrap.js',
+		        		'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
 
-		        		//APP FILES
+						//APP FILES
 		        		'source/js/app.js',
 		        		'source/js/**/*.controller.js',
 		        		'source/js/**/*.directive.js',
+		        		'source/js/**/*.filter.js',
 
 						//CSS
 		          		'source/dist/styles/css/main.css'

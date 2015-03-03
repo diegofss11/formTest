@@ -1,13 +1,35 @@
 /*
  * Global SCSS file - other files must be imported here
 */
-/* app css stylesheet */
-/* line 3, ../../../styles/_page1.scss */
-body li {
-  color: white;
+/*
+ * Variables
+*/
+/*
+ * CSS related to the firstScreen
+*/
+/*
+ * CSS related to the secondScreen
+*/
+/*
+ * CSS in common for all application
+*/
+/*
+ * Variables
+*/
+/* line 6, ../../../styles/_common.scss */
+.separator {
+  padding-right: 5px;
+  border-right: 1px solid gray;
 }
 
-/* line 1, ../../../styles/_page2.scss */
-ul {
-  color: white;
+/* line 11, ../../../styles/_common.scss */
+.highlight {
+  color: orange;
+}
+
+/* line 15, ../../../styles/_common.scss */
+.panel-default > .panel-heading {
+  background-color: #ececec;
+  font-size: 12px;
+  padding: 5px 10px;
 }

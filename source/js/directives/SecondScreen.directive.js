@@ -2,14 +2,11 @@
 	'use strict';
 
 	/**
-	 * @ngdoc directive
-	 * @name TestDirective
-	 * @description
-	 * This is a test directive
-	 * @example
-	   <example>
-	       <div test-directive></div>
-	    </example>
+	 * [SecondScreen directive] Responsible to include secondScreen template
+	 *
+	 * <example>
+	 *     <div second-screen></div>
+	 * </example>
 	 */
 
 	angular.module('formTest')

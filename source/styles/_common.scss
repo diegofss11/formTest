@@ -1,0 +1,19 @@
+/*
+ * CSS in common for all application
+*/
+@import "variables";
+
+.separator {
+	padding-right: 5px;
+	border-right: 1px solid gray;
+}
+
+.highlight {
+	color: orange;
+}
+
+.panel-default>.panel-heading {
+	background-color: $header-background;
+	font-size: $font-size-medium;
+	padding: 5px 10px;
+}
