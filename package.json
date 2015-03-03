@@ -1,6 +1,7 @@
 {
-  "name": "Form Test",
-  "version": "0.0.0",
+  "name": "FormTest",
+  "version": "1.0.0",
+  "description": "Form for a test application",
   "author": "Diego Freitas Siqueira Souza",
   "repository": "https://github.com/diegofss11/formTest",
   "devDependencies": {

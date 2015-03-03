@@ -1,7 +1,7 @@
 {
-  "name": "Form Test",
+  "name": "FormTest",
   "description": "Form Test",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "repository": "https://github.com/diegofss11/formTest",
   "license": "MIT",
   "devDependencies": {
