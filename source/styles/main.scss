@@ -1,8 +1,9 @@
-/*
- * Global SCSS file - other files must be imported here
-*/
+/*------------------------------------------------------*\
+    #GLOBAL SCSS FILE - OTHER FILES MUST BE IMPORTED HERE
+\*------------------------------------------------------*/
 @import "compass";
 @import "variables";
 @import "firstScreen";
 @import "secondScreen";
+@import "forms";
 @import "common";

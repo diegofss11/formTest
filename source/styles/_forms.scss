@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    #FORMS
+\*------------------------------------*/
+input {
+	&.filter {
+		font-size: $font-size-small;
+		margin: 20px 7px;
+		padding: 4px 10px;
+		width: 280px;
+	}
+}
+
+.checkbox-custom {
+	margin: 5px 10px;
+	position: relative;
+}
+
+.checkbox-custom label {
+	background: white;
+	border:1px solid #ddd;
+	cursor: pointer;
+	height: 18px;
+	left: 0;
+	max-width: none;
+	position: absolute;
+	top: 0;
+  	width: 18px;
+}
+
+.checkbox-custom label:after {
+	border: 3px solid #333;
+	border-top: none;
+	border-right: none;
+	background: white;
+	content: '';
+	opacity: 0;
+	height: 6px;
+	left: 3px;
+	position: absolute;
+	top: 5px;
+	width: 11px;
+
+	@include transform(rotate(-45deg));
+}
+
+.checkbox-custom input[type=checkbox]:checked + label:after {
+	opacity: 1;
+}

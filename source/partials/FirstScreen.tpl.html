@@ -14,7 +14,12 @@
 			</div>
 			<!-- using $parent because ng-repeat creates a new child scope -->
 			<div class="checkbox-items" ng-class="$parent.templateField.category === 1 ? 'col-md-3' : 'col-md-4'" ng-repeat="item in templateField.items">
-				<input type="checkbox" aria-label="{{ item.label }}" ng-model="item.value">
+				<span class="checkbox-custom">
+					<input type="checkbox" id="checkbox-custom" aria-label="{{ item.label }}" ng-model="item.value" name="" />
+					<label for="checkbox-custom"></label>
+				</span>
+				<span>{{ item.label }}</span>
+
 				<span ng-bind-html="item.label | highlight:vmFirstScreen.filter"></span>
 			</div>
 		</accordion-group>

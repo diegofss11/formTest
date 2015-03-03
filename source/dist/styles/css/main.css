@@ -1,55 +1,101 @@
-/*
- * Global SCSS file - other files must be imported here
-*/
-/*
- * Variables
-*/
+/*------------------------------------------------------*\
+    #GLOBAL SCSS FILE - OTHER FILES MUST BE IMPORTED HERE
+\*------------------------------------------------------*/
+/*------------------------------------*\
+    #VARIABLES
+\*------------------------------------*/
 /*
  * CSS related to the firstScreen
 */
 /*
  * CSS related to the secondScreen
 */
-/*
- * CSS in common for all application
-*/
-/*
- * Variables
-*/
-/* line 6, ../../../styles/_common.scss */
-input[type=checkbox]::before {
-  font-size: 12px;
-  color: yellow;
-}
-
-/* line 11, ../../../styles/_common.scss */
-.separator {
-  padding-right: 5px;
-  border-right: 1px solid gray;
-}
-
-/* line 16, ../../../styles/_common.scss */
-.highlight {
-  color: orange;
-}
-
-/* line 20, ../../../styles/_common.scss */
-.glyphicon {
-  cursor: pointer;
-}
-
-/* line 25, ../../../styles/_common.scss */
-.template-fields {
-  padding: 20px;
-}
-/* line 29, ../../../styles/_common.scss */
-.template-fields input.filter {
+/*------------------------------------*\
+    #FORMS
+\*------------------------------------*/
+/* line 5, ../../../styles/_forms.scss */
+input.filter {
   font-size: 12px;
   margin: 20px 7px;
   padding: 4px 10px;
   width: 280px;
 }
-/* line 37, ../../../styles/_common.scss */
+
+/* line 13, ../../../styles/_forms.scss */
+.checkbox-custom {
+  margin: 5px 10px;
+  position: relative;
+}
+
+/* line 18, ../../../styles/_forms.scss */
+.checkbox-custom label {
+  background: white;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  height: 18px;
+  left: 0;
+  max-width: none;
+  position: absolute;
+  top: 0;
+  width: 18px;
+}
+
+/* line 30, ../../../styles/_forms.scss */
+.checkbox-custom label:after {
+  border: 3px solid #333;
+  border-top: none;
+  border-right: none;
+  background: white;
+  content: '';
+  opacity: 0;
+  height: 6px;
+  left: 3px;
+  position: absolute;
+  top: 5px;
+  width: 11px;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* line 46, ../../../styles/_forms.scss */
+.checkbox-custom input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+
+/*------------------------------------*\
+    #COMMON
+\*------------------------------------*/
+/*------------------------------------*\
+    #VARIABLES
+\*------------------------------------*/
+/* line 6, ../../../styles/_common.scss */
+.main-content {
+  font-size: 12px;
+}
+
+/* line 10, ../../../styles/_common.scss */
+.separator {
+  padding-right: 5px;
+  border-right: 1px solid gray;
+}
+
+/* line 15, ../../../styles/_common.scss */
+.highlight {
+  color: orange;
+}
+
+/* line 19, ../../../styles/_common.scss */
+.glyphicon {
+  cursor: pointer;
+}
+
+/* line 24, ../../../styles/_common.scss */
+.template-fields {
+  padding: 20px;
+}
+/* line 27, ../../../styles/_common.scss */
 .template-fields .glyphicon-remove::before {
   content: "\e014";
   left: -35px;
@@ -57,67 +103,72 @@ input[type=checkbox]::before {
   position: absolute;
   color: #a8a8a8;
 }
-/* line 45, ../../../styles/_common.scss */
+/* line 35, ../../../styles/_common.scss */
 .template-fields .section-heading {
   background-color: #f5f5f5;
   color: #2889d4;
+  font-size: 14px;
   padding: 10px;
   text-transform: uppercase;
 }
-/* line 52, ../../../styles/_common.scss */
+/* line 43, ../../../styles/_common.scss */
 .template-fields .section-heading.numbered::before {
   background-color: #2889d4;
   content: '2';
   color: white;
+  display: inline-block;
+  height: 22px;
   margin-right: 10px;
-  padding: 6px;
+  padding-left: 7px;
+  padding-top: 1px;
+  width: 22px;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 64, ../../../styles/_common.scss */
+/* line 59, ../../../styles/_common.scss */
 .template-fields .panel {
   border: 0;
 }
-/* line 67, ../../../styles/_common.scss */
+/* line 62, ../../../styles/_common.scss */
 .template-fields .panel .panel-title {
+  color: #2889d4;
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
-  color: #2889d4;
 }
-/* line 75, ../../../styles/_common.scss */
+/* line 70, ../../../styles/_common.scss */
 .template-fields .panel-group .panel-heading + .panel-collapse > .panel-body {
   border: 0;
 }
-/* line 79, ../../../styles/_common.scss */
+/* line 74, ../../../styles/_common.scss */
 .template-fields .panel-default > .panel-heading {
   margin-bottom: 15px;
 }
-/* line 82, ../../../styles/_common.scss */
+/* line 77, ../../../styles/_common.scss */
 .template-fields .panel-default > .panel-heading .glyphicon {
   color: #2889d4;
   font-size: 12px;
 }
-/* line 88, ../../../styles/_common.scss */
+/* line 83, ../../../styles/_common.scss */
 .template-fields .action-links {
   margin-bottom: 12px;
 }
-/* line 91, ../../../styles/_common.scss */
+/* line 86, ../../../styles/_common.scss */
 .template-fields .action-links a {
   text-decoration: underline;
 }
-/* line 96, ../../../styles/_common.scss */
+/* line 91, ../../../styles/_common.scss */
 .template-fields .checkbox-items {
   padding-top: 15px;
   padding-bottom: 30px;
 }
-/* line 100, ../../../styles/_common.scss */
+/* line 95, ../../../styles/_common.scss */
 .template-fields .checkbox-items.col-md-3 {
   padding-left: 0;
 }
 
-/* line 106, ../../../styles/_common.scss */
+/* line 101, ../../../styles/_common.scss */
 .clearButton {
   position: absolute;
   right: 5px;

@@ -4,16 +4,6 @@ module.exports = function( grunt ) {
 	grunt.initConfig({
 	  	pkg: grunt.file.readJSON('package.json'),
 
-		connect: { //task
-			server:{ //target
-				options: { //target option
-					port: 8001,
-					hostname: 'localhost', // Change this to '0.0.0.0' to access the server from outside.
-					keepalive: true,
-					open: false
-				}
-			}
-		},
 		compass: {
 			build: {
 				options: {
@@ -40,15 +30,9 @@ module.exports = function( grunt ) {
 				]
 			}
 		},
-		open: {
-			build: {
-				path: 'http://127.0.0.1:8001',
-      			app: 'Google Chrome'
-			}
-		},
 		watch: {
 			html: {
-				files: ['index.html', 'source/partials/*.tpl.html'],
+				files: ['/source/index.html', 'source/partials/*.tpl.html'],
 				task: ['default'],
 				options: {
 					livereload: true
@@ -67,21 +51,30 @@ module.exports = function( grunt ) {
       			tasks: ['compass']
       		},
       		livereload: {
-		       	files: ['public/dist/styles/css/main.css'],
+		       	files: ['source/dist/styles/css/main.css'],
 		       	options: {
 					livereload: true,
 					livereloadOnError: false
 				}
 		    }
     	},
+    	open: {
+			build: {
+				path: 'http://127.0.0.1:3030',
+      			app: 'Google Chrome'
+			}
+		},
     	injector: {
+    		options: {
+				ignorePath: 'source/'
+			},
 			app: {
 		      	files: {
-		      		'index.html' : [
+		      		'source/index.html' : [
 		        		//JS
-		        		'bower_components/angular/angular.js',
-		        		'bower_components/angular-bootstrap/ui-bootstrap.js',
-		        		'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+		        		'source/vendor/angular/angular.js',
+		        		'source/vendor/angular-bootstrap/ui-bootstrap.js',
+		        		'source/vendor/angular-bootstrap/ui-bootstrap-tpls.js',
 
 						//APP FILES
 		        		'source/js/app.js',
@@ -101,7 +94,6 @@ module.exports = function( grunt ) {
   	// LOAD GRUNT PLUGINS ========================================================
     // ===========================================================================
 	grunt.loadNpmTasks('grunt-contrib-compass'); //compile SASS to CSS - must install compass through gem - gem install compass
-	grunt.loadNpmTasks('grunt-contrib-connect'); //connect a webservice
 	grunt.loadNpmTasks('grunt-contrib-jshint'); //keep JavaScript code consistent
 	grunt.loadNpmTasks('grunt-contrib-uglify');	//minimify javascript files
 	grunt.loadNpmTasks('grunt-contrib-watch'); //run predefined tasks whenever watched file patterns are added, changed or deleted.
@@ -112,7 +104,7 @@ module.exports = function( grunt ) {
 	// ===========================================================================
   	// REGISTER TASKS ============================================================
   	// ===========================================================================
-	grunt.registerTask('default', ['compass', 'injector', 'connect:server', 'open:build', 'watch']);
-	grunt.registerTask('build', ['compass', 'injector', 'jshint', 'ngAnnotate', 'uglify', 'connect:server', 'open:build', 'watch']);
+	grunt.registerTask('default', ['compass', 'injector', 'open:build', 'watch']);
+	grunt.registerTask('build', ['compass', 'injector', 'jshint', 'ngAnnotate', 'uglify', 'open:build', 'watch']);
 };
 
