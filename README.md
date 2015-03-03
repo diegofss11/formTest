@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ===========
 MyAngularSeed - Seed for AngularJS application starter
 ===========
@@ -21,3 +22,6 @@ MyAngularSeed - Seed for AngularJS application starter
 
 
 
+=======
+# formTest
+>>>>>>> 4ba09b216bda7917d544fd551ff67cb49e9a6eda
