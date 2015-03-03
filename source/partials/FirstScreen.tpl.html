@@ -1,15 +1,19 @@
 <div class="template-fields">
-	<input type="text" placeholder="Filter" ng-model="vmFirstScreen.filter">
+	<div class="section-heading numbered panel-heading">Choose template fields</div>
+	<input class="filter" type="text" placeholder="Filter" ng-model="vmFirstScreen.filter">
+	<span class="glyphicon glyphicon-remove" ng-click="vmFirstScreen.filter = ''"></span>
 
 	<accordion close-others="false">
 		<accordion-group is-open="templateField.isOpen" ng-repeat="templateField in vmFirstScreen.templateFields">
 			<accordion-heading>
 				{{ templateField.title }} <i class="pull-right glyphicon" ng-class="templateField.isOpen ? 'glyphicon glyphicon-menu-up' : 'glyphicon glyphicon-menu-down'"></i>
 			</accordion-heading>
-			<a href="#" class="separator">Select all</a>
-			<a href="#">Deselect all</a>
-
-			<div class="checkbox-items" ng-repeat="item in templateField.items">
+			<div class="action-links">
+				<a href="#" class="separator" ng-click="vmFirstScreen.selectAll(true, templateField.category)">Select all</a>
+				<a href="#" ng-click="vmFirstScreen.selectAll(false, templateField.category)">Deselect all</a>
+			</div>
+			<!-- using $parent because ng-repeat creates a new child scope -->
+			<div class="checkbox-items" ng-class="$parent.templateField.category === 1 ? 'col-md-3' : 'col-md-4'" ng-repeat="item in templateField.items">
 				<input type="checkbox" aria-label="{{ item.label }}" ng-model="item.value">
 				<span ng-bind-html="item.label | highlight:vmFirstScreen.filter"></span>
 			</div>

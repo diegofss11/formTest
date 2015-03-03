@@ -8,10 +8,32 @@
 	function FirstScreenController() {
 		var _self = this;
 
+
+		//Private - get all the items given a category
+		function _getAllItemsByCategory(category) {
+			for (var i = 0; i < _self.templateFields.length; i++) {
+				var templateField = _self.templateFields[i];
+
+				if(templateField.category === category) {
+					return templateField.items;
+				}
+			};
+		}
+
+		//Public - select all category given
+		_self.selectAll = function(isSelectAll, category) {
+			var items = _getAllItemsByCategory(category);
+
+			items.map(function(item) {
+				return item.value = isSelectAll;
+			});
+		};
+
 		//dynamic data
 		_self.templateFields = [{
 			isOpen: true,
-			title: 'BASIC LISTING INFORMATION',
+			category: 1,
+			title: 'Basic listing information',
 			items: [{
 				label: 'Ship From Country',
 				value: true
@@ -31,7 +53,8 @@
 		},
 		{
 			isOpen: false,
-			title: 'SHIPPING OPTIONS',
+			category: 2,
+			title: 'Shipping options',
 			items: [{
 				label: 'Shipping Rate',
 				value: true
