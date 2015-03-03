@@ -4,7 +4,7 @@
 	/**
 	 * @ngdoc directive
 	 * @name TestDirective
-	 * @description 
+	 * @description
 	 * This is a test directive
 	 * @example
 	   <example>
@@ -12,14 +12,14 @@
 	    </example>
 	 */
 
-	angular.module('app')
-		.directive('testDirective', function(){
+	angular.module('formTest')
+		.directive('firstScreen', function(){
 			return {
 				restrict: 'EA',
-				templateUrl: '/source/partials/TestTemplate.html'						
+				templateUrl: '/source/partials/FirstScreen.tpl.html'
 			};
 		});
-})();  
+})();
 
 
 

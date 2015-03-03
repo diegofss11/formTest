@@ -19,7 +19,7 @@
         "jQuery": false,
 
         "app": true,
-        
+
         "browser": false,
         "by": false,
         "By": false,
@@ -35,7 +35,7 @@
         "jasmine": false,
         "spyOn": false,
         "afterEach": false
-    }   
+    }
 }
 
 

@@ -3,13 +3,12 @@
 
 	/**
 	* @name TestController
-	* @description 
+	* @description
 	* This is a test controller
 	*/
 
-	angular.module('app')
+	angular.module('formTest')
 		.controller('testController', function(){
-		
+
 	});
 })();
-  

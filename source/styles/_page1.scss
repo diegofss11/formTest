@@ -2,5 +2,10 @@
  * Global SCSS file - other files must be imported here
 */
 
-@import "page1";
-@import "page2";
+body {
+	li {
+		color: white;
+	}
+}
+
+
