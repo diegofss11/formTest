@@ -12,12 +12,6 @@
 	}
 
 	.section-heading {
-		background-color: $header-background;
-		color: #2889d4;
-		font-size: $font-size-medium;
-		padding: 10px;
-		text-transform: uppercase;
-
 		&.numbered {
 			&::before {
 				background-color: #2889d4;
@@ -37,6 +31,8 @@
 
 	.panel {
 		border: 0;
+
+		@include box-shadow(none);
 
 			.panel-title {
 				color: #2889d4;

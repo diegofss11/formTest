@@ -11,8 +11,68 @@ input {
 	}
 }
 
-.form-group.required {
-	color: red;
+//overwritting due to padding wrongly set
+input[type="date"] {
+     -webkit-align-items: center;
+     display: -webkit-inline-flex;
+     overflow: hidden;
+     padding: 0;
+     -webkit-padding-start: 6px;
+}
+
+.required::after {
+	content: '*';
+	color: #f2c3c2;
+	font-size: 25px;
+	font-weight: 200;
+	position: absolute;
+	right: 8px;
+	top: 0;
+}
+
+.inline-elements {
+	.form-control {
+		display: inline-block;
+		margin-left: 5px;
+		padding: 6px;
+		width: 28px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+.shipping {
+	.inline-elements .form-control {
+		&:first-child {
+			width: 62%;
+		}
+
+		&:last-child {
+			width: 32%;
+		}
+	}
+}
+
+.comision {
+	.inline-elements .form-control {
+		&:first-child {
+			width: 48%;
+		}
+
+		&:last-child {
+			width: 46%;
+		}
+	}
+}
+
+.middle-input-area {
+	margin-left: -21px;
+}
+
+.margin-right-forms {
+	margin-right: 5px;
 }
 
 .checkbox-custom {

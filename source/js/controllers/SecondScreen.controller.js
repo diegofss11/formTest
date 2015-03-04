@@ -15,6 +15,7 @@
 			{ title: 'Inventory', isDisabled: true },
 			{ title: 'Marketplaces', isDisabled: true }
 		];
+
 	}
 
 

@@ -72,9 +72,10 @@ module.exports = function( grunt ) {
 		      	files: {
 		      		'source/index.html' : [
 		        		//JS
-		        		'source/vendor/angular/angular.js',
-		        		'source/vendor/angular-bootstrap/ui-bootstrap.js',
-		        		'source/vendor/angular-bootstrap/ui-bootstrap-tpls.js',
+		        		'source/vendor/angular/angular.min.js',
+		        		'source/vendor/angular-bootstrap/ui-bootstrap.min.js',
+		        		'source/vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
+		        		'source/vendor/angular-route/angular-route.min.js',
 
 						//APP FILES
 		        		'source/js/app.js',
