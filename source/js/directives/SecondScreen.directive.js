@@ -13,7 +13,9 @@
 		.directive('secondScreen', function(){
 			return {
 				restrict: 'EA',
-				templateUrl: '/source/partials/SecondScreen.tpl.html'
+				controller: 'secondScreenCtrl',
+				controllerAs: 'vmSecondScreen',
+				templateUrl: '/partials/SecondScreen.tpl.html'
 			};
 		});
 })();

@@ -5,20 +5,24 @@ input {
 	&.filter {
 		font-size: $font-size-small;
 		margin: 20px 7px;
+		line-height: 1;
 		padding: 4px 10px;
 		width: 280px;
 	}
 }
 
+.form-group.required {
+	color: red;
+}
+
 .checkbox-custom {
-	margin: 5px 10px;
+	margin: 5px 10px 0 0;
 	position: relative;
 }
 
 .checkbox-custom label {
 	background: white;
 	border:1px solid #ddd;
-	cursor: pointer;
 	height: 18px;
 	left: 0;
 	max-width: none;
