@@ -46,9 +46,8 @@ input[type="date"] {
 .inline-elements {
 	.form-control {
 		display: inline-block;
-		margin-left: 5px;
-		padding: 6px;
-		width: 28px;
+		margin-left: 1%;
+		width: 18%;
 
 		&:first-child {
 			margin-left: 0;
@@ -81,11 +80,11 @@ input[type="date"] {
 }
 
 .middle-input-area {
-	margin-left: -21px;
+	margin-left: -9%;
 }
 
 .margin-right-forms {
-	margin-right: 5px;
+	margin-right: 3%;
 }
 
 .checkbox-custom {

@@ -247,50 +247,49 @@ input[type="date"] {
 /* line 47, ../../../styles/_forms.scss */
 .inline-elements .form-control {
   display: inline-block;
-  margin-left: 5px;
-  padding: 6px;
-  width: 28px;
+  margin-left: 1%;
+  width: 18%;
 }
-/* line 53, ../../../styles/_forms.scss */
+/* line 52, ../../../styles/_forms.scss */
 .inline-elements .form-control:first-child {
   margin-left: 0;
 }
 
-/* line 61, ../../../styles/_forms.scss */
+/* line 60, ../../../styles/_forms.scss */
 .shipping .inline-elements .form-control:first-child {
   width: 62%;
 }
-/* line 65, ../../../styles/_forms.scss */
+/* line 64, ../../../styles/_forms.scss */
 .shipping .inline-elements .form-control:last-child {
   width: 32%;
 }
 
-/* line 73, ../../../styles/_forms.scss */
+/* line 72, ../../../styles/_forms.scss */
 .comision .inline-elements .form-control:first-child {
   width: 48%;
 }
-/* line 77, ../../../styles/_forms.scss */
+/* line 76, ../../../styles/_forms.scss */
 .comision .inline-elements .form-control:last-child {
   width: 46%;
 }
 
-/* line 83, ../../../styles/_forms.scss */
+/* line 82, ../../../styles/_forms.scss */
 .middle-input-area {
-  margin-left: -21px;
+  margin-left: -9%;
 }
 
-/* line 87, ../../../styles/_forms.scss */
+/* line 86, ../../../styles/_forms.scss */
 .margin-right-forms {
-  margin-right: 5px;
+  margin-right: 3%;
 }
 
-/* line 91, ../../../styles/_forms.scss */
+/* line 90, ../../../styles/_forms.scss */
 .checkbox-custom {
   margin: 5px 10px 0 0;
   position: relative;
 }
 
-/* line 96, ../../../styles/_forms.scss */
+/* line 95, ../../../styles/_forms.scss */
 .checkbox-custom label {
   background: white;
   border: 1px solid #ddd;
@@ -302,7 +301,7 @@ input[type="date"] {
   width: 18px;
 }
 
-/* line 107, ../../../styles/_forms.scss */
+/* line 106, ../../../styles/_forms.scss */
 .checkbox-custom label:after {
   border: 3px solid #333;
   border-top: none;
@@ -321,7 +320,7 @@ input[type="date"] {
   transform: rotate(-45deg);
 }
 
-/* line 123, ../../../styles/_forms.scss */
+/* line 122, ../../../styles/_forms.scss */
 .checkbox-custom input[type=checkbox]:checked + label:after {
   opacity: 1;
 }
