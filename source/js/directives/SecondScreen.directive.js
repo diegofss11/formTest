@@ -15,7 +15,7 @@
 				restrict: 'EA',
 				controller: 'secondScreenCtrl',
 				controllerAs: 'vmSecondScreen',
-				templateUrl: '/partials/SecondScreen.tpl.html'
+				templateUrl: 'source/partials/SecondScreen.tpl.html'
 			};
 		});
 })();

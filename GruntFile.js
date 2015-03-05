@@ -65,27 +65,24 @@ module.exports = function( grunt ) {
 			}
 		},
     	injector: {
-    		options: {
-				ignorePath: 'source/'
-			},
-			app: {
+    		app: {
 		      	files: {
-		      		'/source/index.html' : [
+		      		'index.html' : [
 		        		//JS
-		        		'/source/vendor/angular/angular.min.js',
-		        		'/source/vendor/angular-bootstrap/ui-bootstrap.min.js',
-		        		'/source/vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
-		        		'/source/vendor/angular-route/angular-route.min.js',
-		        		'/source/vendor/angular-messages/angular-messages.min.js',
+		        		'source/vendor/angular/angular.min.js',
+		        		'source/vendor/angular-bootstrap/ui-bootstrap.min.js',
+		        		'source/vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
+		        		'source/vendor/angular-route/angular-route.min.js',
+		        		'source/vendor/angular-messages/angular-messages.min.js',
 
 						//APP FILES
-		        		'/source/js/app.js',
-		        		'/source/js/**/*.controller.js',
-		        		'/source/js/**/*.directive.js',
-		        		'/source/js/**/*.filter.js',
+		        		'source/js/app.js',
+		        		'source/js/**/*.controller.js',
+		        		'source/js/**/*.directive.js',
+		        		'source/js/**/*.filter.js',
 
 						//CSS
-		          		'/source/dist/styles/css/main.css'
+		          		'source/dist/styles/css/main.css'
 					]
 		        }
 		    }

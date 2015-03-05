@@ -15,7 +15,7 @@
 				restrict: 'EA',
 				controller: 'firstScreenCtrl',
 				controllerAs: 'vmFirstScreen',
-				templateUrl: '/partials/FirstScreen.tpl.html'
+				templateUrl: '/source/partials/FirstScreen.tpl.html'
 			};
 		});
 })();

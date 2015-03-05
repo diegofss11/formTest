@@ -4,7 +4,7 @@ var port = process.env.PORT || 3030,
 
 //setting up server
 app.set('port', port);
-app.use(express.static(__dirname + '/source'));
+app.use(express.static(__dirname + '/')); //root on /
 app.listen(port);
 
 console.log('Listening on port ' + port + " ...");
