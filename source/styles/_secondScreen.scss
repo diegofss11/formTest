@@ -79,6 +79,7 @@
 				}
 			}
 
+
 			&[required] {
 				padding-right: 20px;
 			}
@@ -113,13 +114,16 @@
 			}
 		}
 
-		.glyphicon-ok::before,
-		.glyphicon-exclamation-sign::before {
-			cursor: auto;
-			font-size: 16px;
-			position: relative;
-			top: 4px;
-			left: 127px;
+		.glyphicon-ok,
+		.glyphicon-exclamation-sign {
+			right: 4px;
+
+			&:before {
+				cursor: auto;
+				font-size: 16px;
+				position: relative;
+				top: 4px;
+			}
 		}
 	}
 
@@ -135,16 +139,5 @@
 		display: block;
 		position: relative;
 		top: 25px;
-	}
-
-	.space-left {
-		.glyphicon-ok::before,
-		.glyphicon-exclamation-sign::before {
-			cursor: auto;
-			font-size: 16px;
-			position: relative;
-			top: 4px;
-			left: 42px;
-		}
 	}
 }

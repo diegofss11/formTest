@@ -134,11 +134,11 @@
   -webkit-box-shadow: rgba(0, 0, 0, 0.075) 0 1px 1px, #e0635e 0 0 3px inset;
   box-shadow: rgba(0, 0, 0, 0.075) 0 1px 1px, #e0635e 0 0 3px inset;
 }
-/* line 82, ../../../styles/_secondScreen.scss */
+/* line 83, ../../../styles/_secondScreen.scss */
 .inventory-manager .form-group .form-control[required] {
   padding-right: 20px;
 }
-/* line 87, ../../../styles/_secondScreen.scss */
+/* line 88, ../../../styles/_secondScreen.scss */
 .inventory-manager .form-group .col-sm-2,
 .inventory-manager .form-group .col-sm-3,
 .inventory-manager .form-group .col-sm-6,
@@ -146,56 +146,51 @@
   padding-left: 0;
   padding-right: 0;
 }
-/* line 95, ../../../styles/_secondScreen.scss */
+/* line 96, ../../../styles/_secondScreen.scss */
 .inventory-manager .form-group .upload-item {
   padding-top: 5px;
   padding-right: 5px;
 }
-/* line 99, ../../../styles/_secondScreen.scss */
+/* line 100, ../../../styles/_secondScreen.scss */
 .inventory-manager .form-group .upload-item a {
   text-decoration: underline;
 }
-/* line 103, ../../../styles/_secondScreen.scss */
+/* line 104, ../../../styles/_secondScreen.scss */
 .inventory-manager .form-group .upload-item .glyphicon {
   color: green;
   font-size: 14px;
 }
-/* line 107, ../../../styles/_secondScreen.scss */
+/* line 108, ../../../styles/_secondScreen.scss */
 .inventory-manager .form-group .upload-item .glyphicon:before {
   position: absolute;
   left: 12px;
   top: -12px;
 }
-/* line 116, ../../../styles/_secondScreen.scss */
-.inventory-manager .form-group .glyphicon-ok::before,
-.inventory-manager .form-group .glyphicon-exclamation-sign::before {
+/* line 117, ../../../styles/_secondScreen.scss */
+.inventory-manager .form-group .glyphicon-ok,
+.inventory-manager .form-group .glyphicon-exclamation-sign {
+  right: 4px;
+}
+/* line 121, ../../../styles/_secondScreen.scss */
+.inventory-manager .form-group .glyphicon-ok:before,
+.inventory-manager .form-group .glyphicon-exclamation-sign:before {
   cursor: auto;
   font-size: 16px;
   position: relative;
   top: 4px;
-  left: 127px;
 }
-/* line 127, ../../../styles/_secondScreen.scss */
+/* line 131, ../../../styles/_secondScreen.scss */
 .inventory-manager .img-url-data {
   position: relative;
   top: 5px;
 }
-/* line 132, ../../../styles/_secondScreen.scss */
+/* line 136, ../../../styles/_secondScreen.scss */
 .inventory-manager .border-bottom::after {
   content: '';
   border-bottom: 1px solid #dcdee0;
   display: block;
   position: relative;
   top: 25px;
-}
-/* line 141, ../../../styles/_secondScreen.scss */
-.inventory-manager .space-left .glyphicon-ok::before,
-.inventory-manager .space-left .glyphicon-exclamation-sign::before {
-  cursor: auto;
-  font-size: 16px;
-  position: relative;
-  top: 4px;
-  left: 42px;
 }
 
 /*------------------------------------*\
@@ -436,9 +431,11 @@ input[type="date"] {
 /* line 5, ../../../styles/_iconFonts.scss */
 .glyphicon-ok {
   color: #009c5d;
+  right: 0;
 }
 
-/* line 9, ../../../styles/_iconFonts.scss */
+/* line 10, ../../../styles/_iconFonts.scss */
 .glyphicon-exclamation-sign {
   color: #e0635e;
+  right: 0;
 }
