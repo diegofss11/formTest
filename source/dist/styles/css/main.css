@@ -326,10 +326,11 @@ input[type="date"] {
 /* line 5, ../../../styles/_common.scss */
 .main-content {
   font-size: 12px;
+  min-width: 1000px;
   padding: 20px 25px 20px 20px;
 }
 
-/* line 10, ../../../styles/_common.scss */
+/* line 11, ../../../styles/_common.scss */
 .section-heading {
   background-color: #f5f5f5;
   color: #2889d4;
@@ -337,7 +338,7 @@ input[type="date"] {
   padding: 10px;
   text-transform: uppercase;
 }
-/* line 18, ../../../styles/_common.scss */
+/* line 19, ../../../styles/_common.scss */
 .section-heading.numbered::before {
   background-color: #2889d4;
   content: '2';
@@ -353,44 +354,44 @@ input[type="date"] {
   border-radius: 50%;
 }
 
-/* line 34, ../../../styles/_common.scss */
+/* line 35, ../../../styles/_common.scss */
 .separator {
   padding-right: 5px;
   border-right: 1px solid gray;
 }
 
-/* line 39, ../../../styles/_common.scss */
+/* line 40, ../../../styles/_common.scss */
 .highlight {
   color: #ffaa80;
 }
 
-/* line 43, ../../../styles/_common.scss */
+/* line 44, ../../../styles/_common.scss */
 .glyphicon {
   cursor: pointer;
 }
 
-/* line 47, ../../../styles/_common.scss */
+/* line 48, ../../../styles/_common.scss */
 .space-left {
   padding-left: 58px;
 }
-/* line 50, ../../../styles/_common.scss */
+/* line 51, ../../../styles/_common.scss */
 .space-left .required::after {
   right: 27px;
 }
 
-/* line 55, ../../../styles/_common.scss */
+/* line 56, ../../../styles/_common.scss */
 .description {
   color: #cccccc;
   position: relative;
   top: 0;
 }
 
-/* line 61, ../../../styles/_common.scss */
+/* line 62, ../../../styles/_common.scss */
 .form-group-bordered {
   border-bottom: 1px solid #cccccc;
 }
 
-/* line 66, ../../../styles/_common.scss */
+/* line 67, ../../../styles/_common.scss */
 .clearButton {
   position: absolute;
   right: 5px;
@@ -403,7 +404,7 @@ input[type="date"] {
   color: #ccc;
 }
 
-/* line 78, ../../../styles/_common.scss */
+/* line 79, ../../../styles/_common.scss */
 .alert-balloon {
   background-color: #e0635e;
   color: white;
@@ -412,7 +413,7 @@ input[type="date"] {
   position: absolute;
   top: -28px;
 }
-/* line 86, ../../../styles/_common.scss */
+/* line 87, ../../../styles/_common.scss */
 .alert-balloon:after {
   border-width: 5px 5px 0;
   border-style: solid;
