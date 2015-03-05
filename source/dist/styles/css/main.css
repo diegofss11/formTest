@@ -1,0 +1,445 @@
+/*------------------------------------------------------*\
+    #GLOBAL SCSS FILE - OTHER FILES MUST BE IMPORTED HERE
+\*------------------------------------------------------*/
+/*------------------------------------*\
+    #VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
+    #FIRST_SCREEN
+\*------------------------------------*/
+/* line 6, ../../../styles/_firstScreen.scss */
+.template-fields .glyphicon-remove::before {
+  color: #a8a8a8;
+  content: "\e014";
+  left: -35px;
+  top: -11px;
+  position: absolute;
+}
+/* line 14, ../../../styles/_firstScreen.scss */
+.template-fields .panel {
+  border: 0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 19, ../../../styles/_firstScreen.scss */
+.template-fields .panel .panel-title {
+  color: #2889d4;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+/* line 27, ../../../styles/_firstScreen.scss */
+.template-fields .panel-body {
+  padding-top: 0;
+}
+/* line 31, ../../../styles/_firstScreen.scss */
+.template-fields .panel-group .panel-heading + .panel-collapse > .panel-body {
+  border: 0;
+}
+/* line 35, ../../../styles/_firstScreen.scss */
+.template-fields .panel-default > .panel-heading {
+  margin-bottom: 15px;
+}
+/* line 38, ../../../styles/_firstScreen.scss */
+.template-fields .panel-default > .panel-heading .glyphicon {
+  color: #2889d4;
+  font-size: 12px;
+}
+/* line 44, ../../../styles/_firstScreen.scss */
+.template-fields .action-links {
+  margin-bottom: 12px;
+}
+/* line 47, ../../../styles/_firstScreen.scss */
+.template-fields .action-links a {
+  text-decoration: underline;
+}
+
+/*------------------------------------*\
+    #SECOND-SCREEN
+\*------------------------------------*/
+/* line 5, ../../../styles/_secondScreen.scss */
+.inventory-manager {
+  font-size: 11px;
+}
+/* line 8, ../../../styles/_secondScreen.scss */
+.inventory-manager .row {
+  margin-left: 0;
+}
+/* line 12, ../../../styles/_secondScreen.scss */
+.inventory-manager .nav-tabs {
+  background-color: #f5f5f5;
+  border: 0;
+}
+/* line 16, ../../../styles/_secondScreen.scss */
+.inventory-manager .nav-tabs > li {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+/* line 20, ../../../styles/_secondScreen.scss */
+.inventory-manager .nav-tabs > li a {
+  border: 0;
+  font-weight: 500;
+}
+/* line 25, ../../../styles/_secondScreen.scss */
+.inventory-manager .nav-tabs > li.disabled > a {
+  color: #cfcfcf;
+}
+/* line 29, ../../../styles/_secondScreen.scss */
+.inventory-manager .nav-tabs > li.active > a, .inventory-manager .nav-tabs > li.active > a:hover {
+  background-color: inherit;
+  border: 0;
+  color: #2889d4;
+}
+/* line 38, ../../../styles/_secondScreen.scss */
+.inventory-manager .tab-content {
+  margin-top: 12px;
+  margin-left: 25px;
+}
+/* line 43, ../../../styles/_secondScreen.scss */
+.inventory-manager .form-horizontal .control-label {
+  text-align: initial;
+}
+/* line 48, ../../../styles/_secondScreen.scss */
+.inventory-manager .form-horizontal .col-sm-3 {
+  padding-right: 0;
+}
+/* line 52, ../../../styles/_secondScreen.scss */
+.inventory-manager .form-horizontal .alternate-images {
+  color: #2889d4;
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+/* line 59, ../../../styles/_secondScreen.scss */
+.inventory-manager .form-group {
+  margin-right: 15px;
+  margin-bottom: 8px;
+}
+/* line 63, ../../../styles/_secondScreen.scss */
+.inventory-manager .form-group .control-label {
+  font-weight: 500;
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 69, ../../../styles/_secondScreen.scss */
+.inventory-manager .form-group .form-control {
+  font-size: 11px;
+  height: 24px;
+  padding: 5px;
+}
+/* line 75, ../../../styles/_secondScreen.scss */
+.inventory-manager .form-group .form-control:focus.ng-invalid.ng-dirty {
+  border-color: #e0635e;
+  -moz-box-shadow: rgba(0, 0, 0, 0.075) 0 1px 1px, #e0635e 0 0 3px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.075) 0 1px 1px, #e0635e 0 0 3px inset;
+  box-shadow: rgba(0, 0, 0, 0.075) 0 1px 1px, #e0635e 0 0 3px inset;
+}
+/* line 82, ../../../styles/_secondScreen.scss */
+.inventory-manager .form-group .form-control[required] {
+  padding-right: 20px;
+}
+/* line 87, ../../../styles/_secondScreen.scss */
+.inventory-manager .form-group .col-sm-2,
+.inventory-manager .form-group .col-sm-3,
+.inventory-manager .form-group .col-sm-6,
+.inventory-manager .form-group .col-sm-7 {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 95, ../../../styles/_secondScreen.scss */
+.inventory-manager .form-group .upload-item {
+  padding-top: 5px;
+  padding-right: 5px;
+}
+/* line 99, ../../../styles/_secondScreen.scss */
+.inventory-manager .form-group .upload-item a {
+  text-decoration: underline;
+}
+/* line 103, ../../../styles/_secondScreen.scss */
+.inventory-manager .form-group .upload-item .glyphicon {
+  color: green;
+  font-size: 14px;
+}
+/* line 107, ../../../styles/_secondScreen.scss */
+.inventory-manager .form-group .upload-item .glyphicon:before {
+  position: absolute;
+  left: 12px;
+  top: -12px;
+}
+/* line 116, ../../../styles/_secondScreen.scss */
+.inventory-manager .form-group .glyphicon-ok::before,
+.inventory-manager .form-group .glyphicon-exclamation-sign::before {
+  cursor: auto;
+  font-size: 16px;
+  position: relative;
+  top: 4px;
+  left: 127px;
+}
+/* line 127, ../../../styles/_secondScreen.scss */
+.inventory-manager .img-url-data {
+  position: relative;
+  top: 5px;
+}
+/* line 132, ../../../styles/_secondScreen.scss */
+.inventory-manager .border-bottom::after {
+  content: '';
+  border-bottom: 1px solid #dcdee0;
+  display: block;
+  position: relative;
+  top: 25px;
+}
+/* line 141, ../../../styles/_secondScreen.scss */
+.inventory-manager .space-left .glyphicon-ok::before,
+.inventory-manager .space-left .glyphicon-exclamation-sign::before {
+  cursor: auto;
+  font-size: 16px;
+  position: relative;
+  top: 4px;
+  left: 42px;
+}
+
+/*------------------------------------*\
+    #FORMS
+\*------------------------------------*/
+/* line 5, ../../../styles/_forms.scss */
+input.filter {
+  font-size: 12px;
+  margin: 20px 7px;
+  line-height: 1;
+  padding: 4px 10px;
+  width: 280px;
+}
+
+/* line 15, ../../../styles/_forms.scss */
+input[type="date"] {
+  -webkit-align-items: center;
+  display: -webkit-inline-flex;
+  overflow: hidden;
+  padding: 0;
+  -webkit-padding-start: 6px;
+}
+
+/* line 23, ../../../styles/_forms.scss */
+.required::after {
+  content: '*';
+  color: #f2c3c2;
+  font-size: 25px;
+  font-weight: 200;
+  position: absolute;
+  right: 8px;
+  top: 0;
+}
+
+/* line 33, ../../../styles/_forms.scss */
+.checkbox-items {
+  padding-bottom: 15px;
+}
+/* line 36, ../../../styles/_forms.scss */
+.checkbox-items.col-md-3, .checkbox-items.col-md-4 {
+  padding-left: 0;
+}
+
+/* line 42, ../../../styles/_forms.scss */
+.error-message {
+  position: absolute;
+}
+
+/* line 47, ../../../styles/_forms.scss */
+.inline-elements .form-control {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 6px;
+  width: 28px;
+}
+/* line 53, ../../../styles/_forms.scss */
+.inline-elements .form-control:first-child {
+  margin-left: 0;
+}
+
+/* line 61, ../../../styles/_forms.scss */
+.shipping .inline-elements .form-control:first-child {
+  width: 62%;
+}
+/* line 65, ../../../styles/_forms.scss */
+.shipping .inline-elements .form-control:last-child {
+  width: 32%;
+}
+
+/* line 73, ../../../styles/_forms.scss */
+.comision .inline-elements .form-control:first-child {
+  width: 48%;
+}
+/* line 77, ../../../styles/_forms.scss */
+.comision .inline-elements .form-control:last-child {
+  width: 46%;
+}
+
+/* line 83, ../../../styles/_forms.scss */
+.middle-input-area {
+  margin-left: -21px;
+}
+
+/* line 87, ../../../styles/_forms.scss */
+.margin-right-forms {
+  margin-right: 5px;
+}
+
+/* line 91, ../../../styles/_forms.scss */
+.checkbox-custom {
+  margin: 5px 10px 0 0;
+  position: relative;
+}
+
+/* line 96, ../../../styles/_forms.scss */
+.checkbox-custom label {
+  background: white;
+  border: 1px solid #ddd;
+  height: 18px;
+  left: 0;
+  max-width: none;
+  position: absolute;
+  top: 0;
+  width: 18px;
+}
+
+/* line 107, ../../../styles/_forms.scss */
+.checkbox-custom label:after {
+  border: 3px solid #333;
+  border-top: none;
+  border-right: none;
+  background: white;
+  content: '';
+  opacity: 0;
+  height: 6px;
+  left: 3px;
+  position: absolute;
+  top: 5px;
+  width: 11px;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* line 123, ../../../styles/_forms.scss */
+.checkbox-custom input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+
+/*------------------------------------*\
+    #COMMON
+\*------------------------------------*/
+/* line 5, ../../../styles/_common.scss */
+.main-content {
+  font-size: 12px;
+  padding: 20px 25px 20px 20px;
+}
+
+/* line 10, ../../../styles/_common.scss */
+.section-heading {
+  background-color: #f5f5f5;
+  color: #2889d4;
+  font-size: 14px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+/* line 18, ../../../styles/_common.scss */
+.section-heading.numbered::before {
+  background-color: #2889d4;
+  content: '2';
+  color: white;
+  display: inline-block;
+  height: 22px;
+  margin-right: 10px;
+  padding-left: 7px;
+  padding-top: 1px;
+  width: 22px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+/* line 34, ../../../styles/_common.scss */
+.separator {
+  padding-right: 5px;
+  border-right: 1px solid gray;
+}
+
+/* line 39, ../../../styles/_common.scss */
+.highlight {
+  color: #ffaa80;
+}
+
+/* line 43, ../../../styles/_common.scss */
+.glyphicon {
+  cursor: pointer;
+}
+
+/* line 47, ../../../styles/_common.scss */
+.space-left {
+  padding-left: 58px;
+}
+/* line 50, ../../../styles/_common.scss */
+.space-left .required::after {
+  right: 27px;
+}
+
+/* line 55, ../../../styles/_common.scss */
+.description {
+  color: #cccccc;
+  position: relative;
+  top: 0;
+}
+
+/* line 61, ../../../styles/_common.scss */
+.form-group-bordered {
+  border-bottom: 1px solid #cccccc;
+}
+
+/* line 66, ../../../styles/_common.scss */
+.clearButton {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  bottom: 0;
+  height: 14px;
+  margin: auto;
+  font-size: 14px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+/* line 78, ../../../styles/_common.scss */
+.alert-balloon {
+  background-color: #e0635e;
+  color: white;
+  font-size: 11px;
+  padding: 4px;
+  position: absolute;
+  top: -28px;
+}
+/* line 86, ../../../styles/_common.scss */
+.alert-balloon:after {
+  border-width: 5px 5px 0;
+  border-style: solid;
+  border-color: #e0635e transparent;
+  bottom: -5px;
+  content: "";
+  left: 4px;
+  display: block;
+  position: absolute;
+  width: 0;
+}
+
+/*------------------------------------*\
+    #ICON FONTS
+\*------------------------------------*/
+/* line 5, ../../../styles/_iconFonts.scss */
+.glyphicon-ok {
+  color: #009c5d;
+}
+
+/* line 9, ../../../styles/_iconFonts.scss */
+.glyphicon-exclamation-sign {
+  color: #e0635e;
+}
