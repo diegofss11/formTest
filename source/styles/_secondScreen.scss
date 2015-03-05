@@ -69,6 +69,7 @@
 		.form-control {
 			font-size: $font-size-small - 1;
 			height: 24px;
+			padding: 5px;
 
 			&:focus {
 				&.ng-invalid.ng-dirty {
@@ -76,6 +77,10 @@
 
 					@include box-shadow(rgba(0,0,0,.075) 0 1px 1px, $c-error 0 0 3px inset);
 				}
+			}
+
+			&[required] {
+				padding-right: 20px;
 			}
 		}
 
@@ -114,7 +119,7 @@
 			font-size: 16px;
 			position: relative;
 			top: 4px;
-			left: 125px;
+			left: 127px;
 		}
 	}
 

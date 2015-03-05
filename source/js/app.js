@@ -4,7 +4,7 @@
 	angular.module('formTest', ['ui.bootstrap', 'ngRoute', 'ngMessages']);
 
     angular.module('formTest')
-        .config( function ($routeProvider) {
+        .config( function($routeProvider) {
             $routeProvider.
                 when('/first-screen', {
                     template: '<div class="main-content" first-screen><div>'

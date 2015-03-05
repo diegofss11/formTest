@@ -5,7 +5,7 @@
 				<form role="form" class="form-horizontal" name="productInfoForm" nodavalidate>
 					<div class="row">
 						<div class="form-group col-sm-3">
-							<label for="product-name" class="col-sm-6 control-label required">Product Name</label>
+							<label for="productName" class="col-sm-6 control-label required">Product Name</label>
 							<div class="col-sm-6">
 								<input name="productName" type="text" ng-model="product.productName" class="form-control" required>
 								<span class="glyphicon error-message" ng-show="productInfoForm.productName.$dirty" ng-class="productInfoForm.productName.$invalid ? 'glyphicon-exclamation-sign' : 'glyphicon-ok'"></span>
@@ -14,13 +14,13 @@
 						<div class="form-group col-sm-3 space-left">
 							<label for="model-number" class="col-sm-6 control-label">Model Number</label>
 							<div class="col-sm-7 middle-input-area">
-								<input type="text" class="form-control">
+								<input type="text" ng-model="product.modelNumber" class="form-control">
 							</div>
 						</div>
 						<div class="form-group col-sm-6 space-left">
 							<label for="main-image" class="col-sm-3 control-label">Main Image</label>
 							<div class="col-sm-7">
-								<input type="text" class="form-control" placeholder="Enter the image url OR click Upload">
+								<input type="text" class="form-control" ng-model="product.mainImage" placeholder="Enter the image url OR click Upload">
 							</div>
 							<div class="col-sm-2 upload-item">
 								<a href="#" ng-click="vmSecondScreen.upload()" class="pull-right">Upload</a>
@@ -34,19 +34,19 @@
 						<div class="form-group col-sm-3">
 							<label for="sku" class="col-sm-6 control-label">SKU</label>
 							<div class="col-sm-6">
-								<input type="text" class="form-control">
+								<input type="text" class="form-control" ng-model="product.sku">
 							</div>
 						</div>
 						<div class="form-group col-sm-3 space-left">
 							<label for="asin" class="col-sm-6 control-label">ASIN</label>
 							<div class="col-sm-7 middle-input-area">
-								<input type="text" class="form-control">
+								<input type="text" class="form-control" ng-model="product.asin">
 							</div>
 						</div>
 						<div class="form-group col-sm-6 space-left">
 							<label for="thumbnail-img" class="col-sm-3 control-label">Thumbnail Image</label>
 							<div class="col-sm-7">
-								<input type="text" class="form-control" placeholder="Enter the image url OR click Upload">
+								<input type="text" class="form-control" placeholder="Enter the image url OR click Upload" ng-model="product.thumbnailImage">
 							</div>
 							<div class="col-sm-2 upload-item">
 								<a href="#" ng-click="vmSecondScreen.upload()" class="pull-right">Upload</a>
@@ -68,11 +68,11 @@
 						<div class="form-group col-sm-3 space-left">
 							<label for="isbn" class="col-sm-6 control-label">ISBN</label>
 							<div class="col-sm-7 middle-input-area">
-								<input type="text" class="form-control">
+								<input type="text" class="form-control" ng-model="product.isbn">
 							</div>
 						</div>
 						<div class="form-group col-sm-6 space-left alternate-images">
-							<div>ALTERNATE IMAGES</div>
+							<div>Alternate images</div>
 						</div>
 					</div>
 
@@ -96,7 +96,7 @@
 							<div class="img-url-data">
 								<label for="image-url" class="col-sm-3 control-label">Image Url</label>
 								<div class="col-sm-7">
-									<input type="text" class="form-control" placeholder="Enter the image url and click + OR click Upload">
+									<input type="text" class="form-control" placeholder="Enter the image url and click + OR click Upload" ng-model="product.imageUrl">
 								</div>
 								<div class="col-sm-2 upload-item">
 									<span class="glyphicon glyphicon-plus"></span>
@@ -112,13 +112,13 @@
 						<div class="form-group col-sm-3">
 							<label for="buy-id" class="col-sm-6 control-label">Buy ID</label>
 							<div class="col-sm-6 ">
-								<input type="text" class="form-control">
+								<input type="text" class="form-control" ng-model="product.buyId">
 							</div>
 						</div>
 						<div class="form-group col-sm-3 col-sm-offset-6 space-left">
 							<label for="release-date" class="col-sm-6 control-label">Release Date</label>
 							<div class="col-sm-7 middle-input-area">
-								<input type="date" value="" class="form-control">
+								<input type="date" value="" class="form-control" ng-model="product.releaseDate">
 							</div>
 						</div>
 					</div>
@@ -128,13 +128,13 @@
 						<div class="form-group col-sm-3">
 							<label for="ebay-pid" class="col-sm-6 control-label">eBay PID</label>
 							<div class="col-sm-6">
-								<input type="text" class="form-control">
+								<input type="text" class="form-control" ng-model="product.ebayId">
 							</div>
 						</div>
 						<div class="form-group col-sm-3 space-left">
 							<label for="manufacture" class="col-sm-6 control-label">Manufacture</label>
 							<div class="col-sm-7 middle-input-area">
-								<input type="text" class="form-control">
+								<input type="text" class="form-control" ng-model="product.manufacture">
 							</div>
 						</div>
 						<div class="form-group col-sm-6 space-left">
@@ -147,7 +147,7 @@
 						<div class="form-group col-sm-3">
 							<label for="weight" class="col-sm-6 control-label">Weight</label>
 							<div class="col-sm-2 margin-right-forms">
-								<input type="text" class="form-control">
+								<input type="text" class="form-control" ng-model="product.weight">
 							</div>
 							<div class="col-sm-2">
 								<select class="form-control">
@@ -158,7 +158,7 @@
 						<div class="form-group col-sm-3 space-left">
 							<label for="declared-value" class="col-sm-6 control-label">Declared Value</label>
 							<div class="col-sm-3 middle-input-area">
-								<input type="text" class="form-control">
+								<input type="text" class="form-control" ng-model="product.declaredValue">
 							</div>
 						</div>
 					</div>
@@ -167,15 +167,15 @@
 						<div class="form-group col-sm-3">
 							<label for="dimemsions" class="col-sm-6 control-label">Dimensions (Inches)</label>
 							<div class="inline-elements col-sm-6">
-								<input type="text" class="form-control margin-right-forms">W
-								<input type="text" class="form-control margin-right-forms">H
-								<input type="text" class="form-control margin-right-forms">L
+								<input type="text" class="form-control margin-right-forms" ng-model="product.width">W
+								<input type="text" class="form-control margin-right-forms" ng-model="product.height">H
+								<input type="text" class="form-control margin-right-forms" ng-model="product.large">L
 							</div>
 						</div>
 						<div class="form-group col-sm-3 space-left">
 							<label for="unit-qty" class="col-sm-6 control-label">Unit Qty</label>
 							<div class="col-sm-3 middle-input-area">
-								<input type="text" class="form-control">
+								<input type="text" class="form-control" ng-model="product.unitQty">
 							</div>
 						</div>
 					</div>
@@ -185,7 +185,7 @@
 						<div class="form-group col-sm-3 shipping">
 							<label for="ship" class="col-sm-6 control-label">Ship Class,Units in box</label>
 							<div class="inline-elements col-sm-6">
-								<select class="form-control">
+								<select class="form-control" ng-model="product.ship">
 									<option selected>Select...</option>
 								</select>
 								<input type="text" class="form-control">
@@ -193,7 +193,7 @@
 						</div>
 						<div class="form-group col-sm-3 space-left">
 							<label for="unit-type" class="col-sm-6 control-label">Unit Type</label>
-							<div class="col-sm-7 middle-input-area">
+							<div class="col-sm-7 middle-input-area" ng-model="product.unitType">
 								<input type="text" class="form-control">
 							</div>
 						</div>
@@ -202,9 +202,9 @@
 
 					<div class="row">
 						<div class="form-group col-sm-3 max comision">
-							<label for="max-comision" class="col-sm-6 control-label">Product Max. Commision</label>
+							<label for="maxComision" class="col-sm-6 control-label">Product Max. Commision</label>
 							<div class="inline-elements col-sm-6">
-								<input type="text" class="form-control">
+								<input type="text" class="form-control" ng-model="product.maxComision">
 								<select class="form-control">
 									<option selected>Fixed</option>
 								</select>
@@ -213,7 +213,7 @@
 						<div class="form-group col-sm-3 space-left">
 							<label for="taxable-item" class="col-sm-6 control-label">Taxable Item</label>
 							<div class="col-sm-7 middle-input-area">
-								<select class="form-control"></select>
+								<select class="form-control" ng-model="product.taxableItem"></select>
 							</div>
 						</div>
 					</div>
@@ -223,7 +223,7 @@
 						<div class="form-group col-sm-3 shipping">
 							<label for="origin-country" class="col-sm-6 control-label required">Origin Country</label>
 							<div class="col-sm-6">
-								<select name="origin-country" class="form-control" required>
+								<select name="origin-country" class="form-control" ng-model="product.originCountry" required>
 									<option selected>United States</option>
 								</select>
 							</div>
