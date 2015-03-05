@@ -30,6 +30,19 @@ input[type="date"] {
 	top: 0;
 }
 
+.checkbox-items {
+	padding-bottom: 15px;
+
+	&.col-md-3,
+	&.col-md-4 {
+		padding-left: 0;
+	}
+}
+
+.error-message {
+	position: absolute;
+}
+
 .inline-elements {
 	.form-control {
 		display: inline-block;

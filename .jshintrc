@@ -15,10 +15,7 @@
     "strict": false,
     "globals": {
         "angular": false,
-        "$": false,
-        "jQuery": false,
-
-        "app": true,
+        "app": true
     }
 }
 

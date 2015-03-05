@@ -15,7 +15,7 @@ module.exports = function( grunt ) {
 		uglify: {
 		    app: {
 		    	files: {
-		        	'source/dist/js/output.min.js': ['source/dist/js/temp/Annotated.js']
+		        	'source/dist/js/output.min.js': ['source/js/*/*.js']
 		      	}
 		    }
   		},
@@ -76,6 +76,7 @@ module.exports = function( grunt ) {
 		        		'source/vendor/angular-bootstrap/ui-bootstrap.min.js',
 		        		'source/vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
 		        		'source/vendor/angular-route/angular-route.min.js',
+		        		'source/vendor/angular-messages/angular-messages.min.js',
 
 						//APP FILES
 		        		'source/js/app.js',
@@ -106,6 +107,6 @@ module.exports = function( grunt ) {
   	// REGISTER TASKS ============================================================
   	// ===========================================================================
 	grunt.registerTask('default', ['compass', 'injector', 'open:build', 'watch']);
-	grunt.registerTask('build', ['compass', 'injector', 'jshint', 'ngAnnotate', 'uglify', 'open:build', 'watch']);
+	grunt.registerTask('build', ['compass', 'injector', 'jshint', 'uglify', 'open:build', 'watch']);
 };
 

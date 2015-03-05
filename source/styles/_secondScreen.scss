@@ -1,6 +1,6 @@
-/*
- * CSS related to the secondScreen
-*/
+/*------------------------------------*\
+    #SECOND-SCREEN
+\*------------------------------------*/
 
 .inventory-manager {
 	font-size: $font-size-small - 1;
@@ -10,7 +10,7 @@
 	}
 
 	.nav-tabs {
-		background-color: $header-background;
+		background-color: $c-header-background;
 		border: 0;
 
 		& > li {
@@ -22,15 +22,15 @@
 				font-weight: 500;
 			}
 
-			&.disabled>a {
+			&.disabled > a {
 				color: #cfcfcf;
 			}
 
-			&.active>a,
-			&.active>a:hover {
+			&.active > a,
+			&.active > a:hover {
 				background-color: inherit;
 				border: 0;
-				color: #2889d4;
+				color: $c-blue;
 			}
 		}
 	}
@@ -50,7 +50,7 @@
 		}
 
 		.alternate-images {
-			color: #2889d4;
+			color: $c-blue;
 			padding-top: 10px;
 			text-transform: uppercase;
 		}
@@ -69,6 +69,14 @@
 		.form-control {
 			font-size: $font-size-small - 1;
 			height: 24px;
+
+			&:focus {
+				&.ng-invalid.ng-dirty {
+					border-color: $c-error;
+
+					@include box-shadow(rgba(0,0,0,.075) 0 1px 1px, $c-error 0 0 3px inset);
+				}
+			}
 		}
 
 		.col-sm-2,
@@ -99,7 +107,17 @@
 
 			}
 		}
+
+		.glyphicon-ok::before,
+		.glyphicon-exclamation-sign::before {
+			cursor: auto;
+			font-size: 16px;
+			position: relative;
+			top: 4px;
+			left: 125px;
+		}
 	}
+
 
 	.img-url-data {
 		position: relative;
@@ -112,5 +130,16 @@
 		display: block;
 		position: relative;
 		top: 25px;
+	}
+
+	.space-left {
+		.glyphicon-ok::before,
+		.glyphicon-exclamation-sign::before {
+			cursor: auto;
+			font-size: 16px;
+			position: relative;
+			top: 4px;
+			left: 42px;
+		}
 	}
 }

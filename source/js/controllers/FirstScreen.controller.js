@@ -17,7 +17,7 @@
 				if(templateField.category === category) {
 					return templateField.items;
 				}
-			};
+			}
 		}
 
 		//Public - select all category given
@@ -25,7 +25,7 @@
 			var items = _getAllItemsByCategory(category);
 
 			items.map(function(item) {
-				return item.value = isSelectAll;
+				item.value = isSelectAll;
 			});
 		};
 

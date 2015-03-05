@@ -9,8 +9,8 @@
 				{{ templateField.title }} <i class="pull-right glyphicon" ng-class="templateField.isOpen ? 'glyphicon glyphicon-menu-up' : 'glyphicon glyphicon-menu-down'"></i>
 			</accordion-heading>
 			<div class="action-links">
-				<a href="#" class="separator" ng-click="vmFirstScreen.selectAll(true, templateField.category)">Select all</a>
-				<a href="#" ng-click="vmFirstScreen.selectAll(false, templateField.category)">Deselect all</a>
+				<a href="javascript:void(0);" class="separator" ng-click="vmFirstScreen.selectAll(true, templateField.category)">Select all</a>
+				<a href="javascript:void(0);" ng-click="vmFirstScreen.selectAll(false, templateField.category)">Deselect all</a>
 			</div>
 			<!-- using $parent because ng-repeat creates a new child scope -->
 			<div class="checkbox-items" ng-class="$parent.templateField.category === 1 ? 'col-md-3' : 'col-md-4'" ng-repeat="item in templateField.items">
