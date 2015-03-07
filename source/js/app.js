@@ -6,10 +6,10 @@
     angular.module('formTest')
         .config( function($routeProvider) {
             $routeProvider.
-                when('/first-screen', {
+                when('/', {
                     template: '<div class="main-content" first-screen><div>'
                 }).
-                when('/second-screen', {
+                when('/secondScreen', {
                     template: '<div class="main-content" second-screen><div>'
                 }).
                 otherwise({

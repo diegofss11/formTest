@@ -5,9 +5,10 @@
 	 * [FirstScreenController responsible for mocking up data]
 	 *
 	 */
-	function FirstScreenController() {
+	function FirstScreenController($location, filterFilter, formService) {
 		var _self = this;
 
+		_self.templateFields = formService.getTemplateFields();
 
 		//Private - get all the items given a category
 		function _getAllItemsByCategory(category) {
@@ -20,6 +21,19 @@
 			}
 		}
 
+		//Private - get all selected values
+		function _getSelectedItems() {
+			var items = [];
+
+			for (var i = 0; i < _self.templateFields.length; i++) {
+				var templateField = _self.templateFields[i];
+
+				items = items.concat(_getAllItemsByCategory(templateField.category));
+			}
+
+			return filterFilter(items, { value:true });
+		}
+
 		//Public - select all category given
 		_self.selectAll = function(isSelectAll, category) {
 			var items = _getAllItemsByCategory(category);
@@ -29,71 +43,22 @@
 			});
 		};
 
-		//dynamic data
-		_self.templateFields = [{
-			isOpen: true,
-			category: 1,
-			title: 'Basic listing information',
-			items: [{
-				label: 'Ship From Country',
-				value: true
-			},
-			{
-				label: 'Ship From Zip Code',
-				value: true
-			},
-			{
-				label: 'Ship From Location',
-				value: true
-			},
-			{
-				label: 'Shipping Profile ID',
-				value: false
-			}]
-		},
-		{
-			isOpen: false,
-			category: 2,
-			title: 'Shipping options',
-			items: [{
-				label: 'Shipping Rate',
-				value: true
-			},
-			{
-				label: 'Check for free shipping on first offered ship service',
-				value: false
-			},
-			{
-				label: 'Check to apply domesic flat shipping discount profile',
-				value: false
-			},
-			{
-				label: 'Check to apply domestic promotional shipping rule',
-				value: false
-			},
-			{
-				label: 'Domestic - Exclude Ship To Location',
-				value: true
-			},
-			{
-				label: 'International Shipping Rate Type',
-				value: false
-			},
-			{
-				label: 'Check to apply international flat shipping discount profile',
-				value: false
-			},
-			{
-				label: 'Check to apply international promotional shipping rule',
-				value: false
-			},
-			{
-				label: 'Global Shipping',
-				value: false
-			}]
-		}];
+		_self.goToSecondScreen = function() {
+			/*USING REAL SERVICE - better approach would be using promise based
+			formService.addTemplateField(templateFields).then(function() {
+				$location.path('#/second-screen'); //change routing
+			});
+			*/
 
+			//USING MOCK SERVICE - NON-PROMISE BASED SOLUTION
+			var selectedItems = _getSelectedItems();
+			formService.addFormItem(selectedItems);
+
+			$location.path('/secondScreen'); //change routing
+		};
 	}
+
+	FirstScreenController.$inject = ['$location', 'filterFilter', 'formService'];
 
 	angular.module('formTest')
 		.controller('firstScreenCtrl', FirstScreenController);
