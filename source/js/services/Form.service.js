@@ -13,19 +13,34 @@
 				title: 'Basic listing information',
 				items: [{
 					label: 'Ship From Country',
-					value: true
+					id: 'listingInformation1',
+					value: true,
+					isRequired: true,
+					type: 'input',
+					className: 'col-sm-8'
 				},
 				{
 					label: 'Ship From Zip Code',
-					value: true
+					id: 'listingInformation2',
+					value: true,
+					isRequired: true,
+					type: 'input',
+					className: 'col-sm-8'
 				},
 				{
 					label: 'Ship From Location',
-					value: true
+					id: 'listingInformation3',
+					value: true,
+					isRequired: true,
+					type: 'input',
+					className: 'col-sm-8'
 				},
 				{
 					label: 'Shipping Profile ID',
-					value: false
+					id: 'listingInformation4',
+					value: false,
+					type: 'select',
+					className: 'col-sm-4'
 				}]
 			},
 			{
@@ -34,39 +49,66 @@
 				title: 'Shipping options',
 				items: [{
 					label: 'Shipping Rate',
-					value: true
+					id: 'shippingOption1',
+					value: true,
+					isRequired: true,
+					type: 'input',
+					className: 'col-sm-8'
 				},
 				{
 					label: 'Check for free shipping on first offered ship service',
-					value: false
+					id: 'shippingOption2',
+					value: false,
 				},
 				{
 					label: 'Check to apply domesic flat shipping discount profile',
-					value: false
+					id: 'shippingOption3',
+					value: false,
+					type: 'input',
+					className: 'col-sm-8'
 				},
 				{
 					label: 'Check to apply domestic promotional shipping rule',
-					value: false
+					id: 'shippingOption4',
+					value: false,
+					type: 'input',
+					className: 'col-sm-8'
 				},
 				{
 					label: 'Domestic - Exclude Ship To Location',
-					value: true
+					id: 'shippingOption5',
+					value: true,
+					isRequired: true,
+					type: 'input',
+					className: 'col-sm-8'
 				},
 				{
 					label: 'International Shipping Rate Type',
-					value: false
+					id: 'shippingOption6',
+					value: false,
+					type: 'input',
+					className: 'col-sm-8'
 				},
 				{
 					label: 'Check to apply international flat shipping discount profile',
-					value: false
+					id: 'shippingOption7',
+					value: false,
+					type: 'select',
+					className: 'col-sm-4'
 				},
 				{
 					label: 'Check to apply international promotional shipping rule',
-					value: false
+					id: 'shippingOption8',
+					value: false,
+					type: 'select',
+					className: 'col-sm-4'
 				},
 				{
 					label: 'Global Shipping',
-					value: false
+					id: 'shippingOption9',
+					value: false,
+					type: 'select',
+					className: 'col-sm-4'
 				}]
 			}];
 

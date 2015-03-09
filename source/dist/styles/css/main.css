@@ -391,7 +391,12 @@ input[type="date"] {
   border-bottom: 1px solid #cccccc;
 }
 
-/* line 67, ../../../styles/_common.scss */
+/* line 66, ../../../styles/_common.scss */
+.navigate {
+  margin-top: 30px;
+}
+
+/* line 70, ../../../styles/_common.scss */
 .clearButton {
   position: absolute;
   right: 5px;
@@ -404,7 +409,7 @@ input[type="date"] {
   color: #ccc;
 }
 
-/* line 79, ../../../styles/_common.scss */
+/* line 82, ../../../styles/_common.scss */
 .alert-balloon {
   background-color: #e0635e;
   color: white;
@@ -413,7 +418,7 @@ input[type="date"] {
   position: absolute;
   top: -28px;
 }
-/* line 87, ../../../styles/_common.scss */
+/* line 90, ../../../styles/_common.scss */
 .alert-balloon:after {
   border-width: 5px 5px 0;
   border-style: solid;
