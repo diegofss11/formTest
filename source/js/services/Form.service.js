@@ -13,15 +13,16 @@
 				title: 'Basic listing information',
 				items: [{
 					label: 'Ship From Country',
-					id: 'listingInformation1',
+					idItem: 'listingInformation1',
 					value: true,
 					isRequired: true,
 					type: 'input',
-					className: 'col-sm-8'
+					className: 'col-sm-8',
+					minLength: 18
 				},
 				{
 					label: 'Ship From Zip Code',
-					id: 'listingInformation2',
+					idItem: 'listingInformation2',
 					value: true,
 					isRequired: true,
 					type: 'input',
@@ -29,7 +30,7 @@
 				},
 				{
 					label: 'Ship From Location',
-					id: 'listingInformation3',
+					idItem: 'listingInformation3',
 					value: true,
 					isRequired: true,
 					type: 'input',
@@ -37,7 +38,7 @@
 				},
 				{
 					label: 'Shipping Profile ID',
-					id: 'listingInformation4',
+					idItem: 'listingInformation4',
 					value: false,
 					type: 'select',
 					className: 'col-sm-4'
@@ -49,7 +50,7 @@
 				title: 'Shipping options',
 				items: [{
 					label: 'Shipping Rate',
-					id: 'shippingOption1',
+					idItem: 'shippingOption1',
 					value: true,
 					isRequired: true,
 					type: 'input',
@@ -57,26 +58,28 @@
 				},
 				{
 					label: 'Check for free shipping on first offered ship service',
-					id: 'shippingOption2',
+					idItem: 'shippingOption2',
 					value: false,
+					type: 'date',
+					className: 'col-sm-4'
 				},
 				{
 					label: 'Check to apply domesic flat shipping discount profile',
-					id: 'shippingOption3',
+					idItem: 'shippingOption3',
 					value: false,
 					type: 'input',
 					className: 'col-sm-8'
 				},
 				{
 					label: 'Check to apply domestic promotional shipping rule',
-					id: 'shippingOption4',
+					idItem: 'shippingOption4',
 					value: false,
 					type: 'input',
 					className: 'col-sm-8'
 				},
 				{
 					label: 'Domestic - Exclude Ship To Location',
-					id: 'shippingOption5',
+					idItem: 'shippingOption5',
 					value: true,
 					isRequired: true,
 					type: 'input',
@@ -84,28 +87,28 @@
 				},
 				{
 					label: 'International Shipping Rate Type',
-					id: 'shippingOption6',
+					idItem: 'shippingOption6',
 					value: false,
 					type: 'input',
 					className: 'col-sm-8'
 				},
 				{
 					label: 'Check to apply international flat shipping discount profile',
-					id: 'shippingOption7',
+					idItem: 'shippingOption7',
 					value: false,
 					type: 'select',
 					className: 'col-sm-4'
 				},
 				{
 					label: 'Check to apply international promotional shipping rule',
-					id: 'shippingOption8',
+					idItem: 'shippingOption8',
 					value: false,
 					type: 'select',
 					className: 'col-sm-4'
 				},
 				{
 					label: 'Global Shipping',
-					id: 'shippingOption9',
+					idItem: 'shippingOption9',
 					value: false,
 					type: 'select',
 					className: 'col-sm-4'

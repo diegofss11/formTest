@@ -5,7 +5,8 @@
     .constant("formConstants", {
         'CHECKBOX': 'checkbox',
         'INPUT': 'input',
-        'SELECT': 'select'
+        'SELECT': 'select',
+        'DATE': 'date'
     })
     .config( function($routeProvider) {
         $routeProvider.

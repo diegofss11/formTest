@@ -3,8 +3,15 @@
 		<tab heading="{{ tab.title }}" ng-repeat="tab in vmSecondScreen.tabs" active="tab.isActive" disabled="tab.isDisabled" >
 			<div ng-if="!tab.isDisabled" class="product-information">
 				<form role="form" class="form-horizontal" name="productInfoForm" nodavalidate>
-					<div class="row" ng-repeat="field in vmSecondScreen.templatesFields">
-						<div dynamic-form="field" element-wrapper-class="col-sm-7" label-class="col-sm-4" input-wrapper-class="{{ field.className }}"></div>
+					<div class="row" ng-form="fieldInfo_{{ $index }}" ng-repeat="field in vmSecondScreen.templatesFields">
+						<div class="form-group col-sm-7">
+							<label for="{{ field.idItem }}" class="col-sm-4 control-label" ng-class="{ 'required' : field.isRequired === true }">{{ field.label }}</label>
+							<div class="{{ field.className }}">
+								<input name="{{ field.idItem }}" ng-model="model" type="text" class="form-control" ng-required="{{ field.isRequired }}" ng-minlength="{{ field.minLength }}">
+								<span class="glyphicon error-message" ng-class="fieldInfo_{{ $index }}[field.idItem].$invalid === true ? 'glyphicon-exclamation-sign' : 'glyphicon-ok'" ng-show="fieldInfo_{{ $index }}[field.idItem].$dirty && {{ field.isRequired === true }}"></span>
+								<span class="alert-balloon" ng-show="fieldInfo_{{ $index }}[field.idItem].$error.minlength">no less than 18 symbols</span>
+							</div>
+						</div>
 					</div>
 				</form>
 			</div>
