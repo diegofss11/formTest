@@ -141,37 +141,38 @@
 /* line 88, ../../../styles/_secondScreen.scss */
 .inventory-manager .form-group .col-sm-2,
 .inventory-manager .form-group .col-sm-3,
+.inventory-manager .form-group .col-sm-4,
 .inventory-manager .form-group .col-sm-6,
 .inventory-manager .form-group .col-sm-7 {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 96, ../../../styles/_secondScreen.scss */
+/* line 97, ../../../styles/_secondScreen.scss */
 .inventory-manager .form-group .upload-item {
   padding-top: 5px;
   padding-right: 5px;
 }
-/* line 100, ../../../styles/_secondScreen.scss */
+/* line 101, ../../../styles/_secondScreen.scss */
 .inventory-manager .form-group .upload-item a {
   text-decoration: underline;
 }
-/* line 104, ../../../styles/_secondScreen.scss */
+/* line 105, ../../../styles/_secondScreen.scss */
 .inventory-manager .form-group .upload-item .glyphicon {
   color: green;
   font-size: 14px;
 }
-/* line 108, ../../../styles/_secondScreen.scss */
+/* line 109, ../../../styles/_secondScreen.scss */
 .inventory-manager .form-group .upload-item .glyphicon:before {
   position: absolute;
   left: 12px;
   top: -12px;
 }
-/* line 117, ../../../styles/_secondScreen.scss */
+/* line 118, ../../../styles/_secondScreen.scss */
 .inventory-manager .form-group .glyphicon-ok,
 .inventory-manager .form-group .glyphicon-exclamation-sign {
   right: 20px;
 }
-/* line 121, ../../../styles/_secondScreen.scss */
+/* line 122, ../../../styles/_secondScreen.scss */
 .inventory-manager .form-group .glyphicon-ok:before,
 .inventory-manager .form-group .glyphicon-exclamation-sign:before {
   cursor: auto;
@@ -179,12 +180,12 @@
   position: relative;
   top: 4px;
 }
-/* line 131, ../../../styles/_secondScreen.scss */
+/* line 132, ../../../styles/_secondScreen.scss */
 .inventory-manager .img-url-data {
   position: relative;
   top: 5px;
 }
-/* line 136, ../../../styles/_secondScreen.scss */
+/* line 137, ../../../styles/_secondScreen.scss */
 .inventory-manager .border-bottom::after {
   content: '';
   border-bottom: 1px solid #dcdee0;

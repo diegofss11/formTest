@@ -17,7 +17,7 @@
 					value: true,
 					isRequired: true,
 					type: 'input',
-					className: 'col-sm-8',
+					className: 'col-sm-7',
 					minLength: 18
 				},
 				{
@@ -26,7 +26,7 @@
 					value: true,
 					isRequired: true,
 					type: 'input',
-					className: 'col-sm-8'
+					className: 'col-sm-7'
 				},
 				{
 					label: 'Ship From Location',
@@ -34,7 +34,7 @@
 					value: true,
 					isRequired: true,
 					type: 'input',
-					className: 'col-sm-8'
+					className: 'col-sm-7'
 				},
 				{
 					label: 'Shipping Profile ID',
@@ -54,28 +54,28 @@
 					value: true,
 					isRequired: true,
 					type: 'input',
-					className: 'col-sm-8'
+					className: 'col-sm-7'
 				},
 				{
 					label: 'Check for free shipping on first offered ship service',
 					idItem: 'shippingOption2',
 					value: false,
 					type: 'date',
-					className: 'col-sm-4'
+					className: 'col-sm-3'
 				},
 				{
 					label: 'Check to apply domesic flat shipping discount profile',
 					idItem: 'shippingOption3',
 					value: false,
 					type: 'input',
-					className: 'col-sm-8'
+					className: 'col-sm-7'
 				},
 				{
 					label: 'Check to apply domestic promotional shipping rule',
 					idItem: 'shippingOption4',
 					value: false,
 					type: 'input',
-					className: 'col-sm-8'
+					className: 'col-sm-7'
 				},
 				{
 					label: 'Domestic - Exclude Ship To Location',
@@ -83,14 +83,14 @@
 					value: true,
 					isRequired: true,
 					type: 'input',
-					className: 'col-sm-8'
+					className: 'col-sm-7'
 				},
 				{
 					label: 'International Shipping Rate Type',
 					idItem: 'shippingOption6',
 					value: false,
 					type: 'input',
-					className: 'col-sm-8'
+					className: 'col-sm-7'
 				},
 				{
 					label: 'Check to apply international flat shipping discount profile',
